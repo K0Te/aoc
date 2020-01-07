@@ -99,8 +99,3 @@ runTillFail state = do
 main = do
   let initial = State 0 xv
   runTillFail initial
-
-
-
-
-

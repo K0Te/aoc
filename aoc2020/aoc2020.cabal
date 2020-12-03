@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 5b3cb05ee71529314d32a2dd79ddbb288d817277782f492964b48a070e0bf085
+-- hash: a41ecc81242106ad3cb77b4411c353be3a7d07bd97b9e3daa0d6fecb630af295
 
 name:           aoc2020
 version:        0.1.0.0
@@ -28,6 +28,7 @@ source-repository head
 library
   exposed-modules:
       Day1
+      Day2
       Import
       Run
       Types
@@ -38,7 +39,8 @@ library
       src
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wpartial-fields -Wredundant-constraints
   build-depends:
-      base >=4.11 && <10
+      attoparsec
+    , base >=4.11 && <10
     , rio >=0.1.12.0
   default-language: Haskell2010
 
@@ -51,6 +53,7 @@ executable aoc2020-exe
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       aoc2020
+    , attoparsec
     , base >=4.11 && <10
     , optparse-simple
     , rio >=0.1.12.0
@@ -67,6 +70,7 @@ test-suite aoc2020-test
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       aoc2020
+    , attoparsec
     , base >=4.11 && <10
     , hspec
     , rio >=0.1.12.0

@@ -3,9 +3,9 @@
 module Run (run) where
 
 import Import
-import Day1
+import Day2
 
 run :: RIO App ()
 run = do
   logInfo "We're inside the application!"
-  Day1.main
+  Day2.main

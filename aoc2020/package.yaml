@@ -26,6 +26,7 @@ dependencies:
 - text
 - containers
 - conduit
+- split
 
 ghc-options:
 - -Wall

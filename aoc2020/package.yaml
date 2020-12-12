@@ -27,6 +27,7 @@ dependencies:
 - containers
 - conduit
 - split
+- vector
 
 ghc-options:
 - -Wall

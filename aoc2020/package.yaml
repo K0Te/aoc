@@ -28,6 +28,7 @@ dependencies:
 - conduit
 - split
 - vector
+- matrix
 
 ghc-options:
 - -Wall

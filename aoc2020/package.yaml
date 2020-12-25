@@ -29,6 +29,7 @@ dependencies:
 - split
 - vector
 - matrix
+- dlist
 
 ghc-options:
 - -Wall

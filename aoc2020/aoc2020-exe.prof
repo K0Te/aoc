@@ -1,0 +1,648 @@
+	Thu Dec 24 20:04 2020 Time and Allocation Profiling Report  (Final)
+
+	   aoc2020-exe +RTS -N -p -hc -RTS
+
+	total time  =        0.42 secs   (1674 ticks @ 1000 us, 4 processors)
+	total alloc = 4,264,485,936 bytes  (excludes profiling overheads)
+
+COST CENTRE  MODULE SRC                          %time %alloc
+
+step.nexts   Day23  src/Day23.hs:(50,9)-(52,44)   59.0   51.0
+step.res     Day23  src/Day23.hs:54:9-30          20.7   22.3
+step         Day23  src/Day23.hs:(44,1)-(55,17)   19.0   25.0
+main.example Day23  src/Day23.hs:35:9-59           1.3    1.7
+
+
+                                                                                                                                                                      individual      inherited
+COST CENTRE                                     MODULE                               SRC                                                          no.      entries  %time %alloc   %time %alloc
+
+MAIN                                            MAIN                                 <built-in>                                                   2830          0    0.0    0.0   100.0  100.0
+ CAF                                            Data.Text.Array                      <entire-module>                                              3041          0    0.0    0.0     0.0    0.0
+ CAF                                            Data.Text.Internal                   <entire-module>                                              3037          0    0.0    0.0     0.0    0.0
+ CAF                                            GHC.Conc.Signal                      <entire-module>                                              2937          0    0.0    0.0     0.0    0.0
+ CAF                                            GHC.IO.Encoding                      <entire-module>                                              2918          0    0.0    0.0     0.0    0.0
+ CAF                                            GHC.IO.Encoding.Iconv                <entire-module>                                              2916          0    0.0    0.0     0.0    0.0
+ CAF                                            GHC.IO.Encoding.UTF8                 <entire-module>                                              2911          0    0.0    0.0     0.0    0.0
+ CAF                                            GHC.IO.Handle.FD                     <entire-module>                                              2907          0    0.0    0.0     0.0    0.0
+ CAF                                            GHC.Event.Poll                       <entire-module>                                              2848          0    0.0    0.0     0.0    0.0
+ CAF                                            GHC.Event.Thread                     <entire-module>                                              2847          0    0.0    0.0     0.0    0.0
+ CAF:$fAlternativeParser3                       Options.Applicative.Types            <no location info>                                           5292          0    0.0    0.0     0.0    0.0
+  return                                        Options.Applicative.Types            src/Options/Applicative/Types.hs:271:3-15                    5784          1    0.0    0.0     0.0    0.0
+ CAF:$fAlternativeParser_$c<|>                  Options.Applicative.Types            src/Options/Applicative/Types.hs:299:3-7                     5297          0    0.0    0.0     0.0    0.0
+  <|>                                           Options.Applicative.Types            src/Options/Applicative/Types.hs:299:3-14                    5699          1    0.0    0.0     0.0    0.0
+ CAF:$fAlternativeParser_$cempty                Options.Applicative.Types            src/Options/Applicative/Types.hs:298:3-7                     5296          0    0.0    0.0     0.0    0.0
+  empty                                         Options.Applicative.Types            src/Options/Applicative/Types.hs:298:3-22                    5868          1    0.0    0.0     0.0    0.0
+ CAF:$fAlternativeParser_$cpure                 Options.Applicative.Types            src/Options/Applicative/Types.hs:264:3-6                     5298          0    0.0    0.0     0.0    0.0
+  pure                                          Options.Applicative.Types            src/Options/Applicative/Types.hs:264:3-20                    5730          1    0.0    0.0     0.0    0.0
+ CAF:$fApplicativeParser_$c<*>                  Options.Applicative.Types            src/Options/Applicative/Types.hs:265:3-7                     5299          0    0.0    0.0     0.0    0.0
+  <*>                                           Options.Applicative.Types            src/Options/Applicative/Types.hs:265:3-15                    5703          1    0.0    0.0     0.0    0.0
+ CAF:$fDisplayIOException2                      RIO.Prelude.Display                  <no location info>                                           4549          0    0.0    0.0     0.0    0.0
+  fromString                                    RIO.Prelude.Display                  src/RIO/Prelude/Display.hs:47:3-42                           5978          1    0.0    0.0     0.0    0.0
+ CAF:$fMonadIORIO1                              RIO.Prelude.RIO                      <no location info>                                           4429          0    0.0    0.0     0.0    0.0
+  liftIO                                        RIO.Prelude.RIO                      src/RIO/Prelude/RIO.hs:40:39-45                              6011          1    0.0    0.0     0.0    0.0
+ CAF:$fMonadP_$creturn                          Options.Applicative.Internal         src/Options/Applicative/Internal.hs:63:3-8                   5205          0    0.0    0.0     0.0    0.0
+  return                                        Options.Applicative.Internal         src/Options/Applicative/Internal.hs:63:3-15                  5950          1    0.0    0.0     0.0    0.0
+ CAF:$fMonadRIO2                                RIO.Prelude.RIO                      <no location info>                                           4431          0    0.0    0.0     0.0    0.0
+  >>                                            RIO.Prelude.RIO                      src/RIO/Prelude/RIO.hs:40:33-37                              5988          1    0.0    0.0     0.0    0.0
+ CAF:$fMonadRIO3                                RIO.Prelude.RIO                      <no location info>                                           4432          0    0.0    0.0     0.0    0.0
+  >>=                                           RIO.Prelude.RIO                      src/RIO/Prelude/RIO.hs:40:33-37                              5993          1    0.0    0.0     0.0    0.0
+ CAF:$fMonadReaderRIO1                          RIO.Prelude.RIO                      <no location info>                                           4426          0    0.0    0.0     0.0    0.0
+  reader                                        RIO.Prelude.RIO                      src/RIO/Prelude/RIO.hs:40:47-61                              5999          1    0.0    0.0     0.0    0.0
+ CAF:$fMonoidDefaultProp_$cmempty               Options.Applicative.Builder.Internal src/Options/Applicative/Builder/Internal.hs:92:3-8           5401          0    0.0    0.0     0.0    0.0
+  mempty                                        Options.Applicative.Builder.Internal src/Options/Applicative/Builder/Internal.hs:92:3-38          5723          1    0.0    0.0     0.0    0.0
+ CAF:$fMonoidMod_$cmappend                      Options.Applicative.Builder.Internal src/Options/Applicative/Builder/Internal.hs:136:3-9          5404          0    0.0    0.0     0.0    0.0
+  mappend                                       Options.Applicative.Builder.Internal src/Options/Applicative/Builder/Internal.hs:136:3-16         5713          1    0.0    0.0     0.0    0.0
+ CAF:$fMonoidMod_$cmempty                       Options.Applicative.Builder.Internal src/Options/Applicative/Builder/Internal.hs:135:3-8          5403          0    0.0    0.0     0.0    0.0
+  mempty                                        Options.Applicative.Builder.Internal src/Options/Applicative/Builder/Internal.hs:135:3-27         5886          1    0.0    0.0     0.0    0.0
+ CAF:$fMonoidUtf8Builder1                       RIO.Prelude.Display                  <no location info>                                           4570          0    0.0    0.0     0.0    0.0
+  <>                                            RIO.Prelude.Display                  src/RIO/Prelude/Display.hs:33:13-21                          6040          1    0.0    0.0     0.0    0.0
+ CAF:abortOption3                               Options.Applicative.Builder          <no location info>                                           5442          0    0.0    0.0     0.0    0.0
+  abortOption                                   Options.Applicative.Builder          src/Options/Applicative/Builder.hs:(341,1)-(344,16)          5881          0    0.0    0.0     0.0    0.0
+   metavar                                      Options.Applicative.Builder          src/Options/Applicative/Builder.hs:201:1-55                  5882          1    0.0    0.0     0.0    0.0
+ CAF:abortOption4                               Options.Applicative.Builder          <no location info>                                           5440          0    0.0    0.0     0.0    0.0
+  abortOption                                   Options.Applicative.Builder          src/Options/Applicative/Builder.hs:(341,1)-(344,16)          5883          0    0.0    0.0     0.0    0.0
+   metavar                                      Options.Applicative.Builder          src/Options/Applicative/Builder.hs:201:1-55                  5884          0    0.0    0.0     0.0    0.0
+    optionMod                                   Options.Applicative.Builder.Internal src/Options/Applicative/Builder/Internal.hs:129:1-25         5885          0    0.0    0.0     0.0    0.0
+ CAF:abortOption6                               Options.Applicative.Builder          <no location info>                                           5441          0    0.0    0.0     0.0    0.0
+  abortOption                                   Options.Applicative.Builder          src/Options/Applicative/Builder.hs:(341,1)-(344,16)          5879          0    0.0    0.0     0.0    0.0
+   value                                        Options.Applicative.Builder          src/Options/Applicative/Builder.hs:173:1-50                  5880          1    0.0    0.0     0.0    0.0
+ CAF:currentEnvVarFormat_rW9S                   RIO.Process                          src/RIO/Process.hs:223:1-19                                  4633          0    0.0    0.0     0.0    0.0
+  currentEnvVarFormat                           RIO.Process                          src/RIO/Process.hs:(223,1)-(227,15)                          6009          1    0.0    0.0     0.0    0.0
+ CAF:defaultLogColors                           RIO.Prelude.Logger                   src/RIO/Prelude/Logger.hs:490:1-16                           4486          0    0.0    0.0     0.0    0.0
+  defaultLogColors                              RIO.Prelude.Logger                   src/RIO/Prelude/Logger.hs:(490,1)-(494,3)                    5976          1    0.0    0.0     0.0    0.0
+ CAF:fullDesc1                                  Options.Applicative.Builder          <no location info>                                           5447          0    0.0    0.0     0.0    0.0
+  fullDesc                                      Options.Applicative.Builder          src/Options/Applicative/Builder.hs:387:1-52                  5688          1    0.0    0.0     0.0    0.0
+ CAF:infoOption                                 Options.Applicative.Builder          src/Options/Applicative/Builder.hs:348:1-10                  5443          0    0.0    0.0     0.0    0.0
+  infoOption                                    Options.Applicative.Builder          src/Options/Applicative/Builder.hs:348:1-34                  5871          1    0.0    0.0     0.0    0.0
+ CAF:internal                                   Options.Applicative.Builder.Internal src/Options/Applicative/Builder/Internal.hs:185:1-8          5406          0    0.0    0.0     0.0    0.0
+  internal                                      Options.Applicative.Builder.Internal src/Options/Applicative/Builder/Internal.hs:185:1-60         5718          1    0.0    0.0     0.0    0.0
+   optionMod                                    Options.Applicative.Builder.Internal src/Options/Applicative/Builder/Internal.hs:129:1-25         5720          0    0.0    0.0     0.0    0.0
+ CAF:isWindows_rW9T                             RIO.Process                          src/RIO/Process.hs:233:1-9                                   4634          0    0.0    0.0     0.0    0.0
+  isWindows                                     RIO.Process                          src/RIO/Process.hs:(233,1)-(235,36)                          6008          1    0.0    0.0     0.0    0.0
+ CAF:liftOpt                                    Options.Applicative.Common           src/Options/Applicative/Common.hs:80:1-7                     5397          0    0.0    0.0     0.0    0.0
+  liftOpt                                       Options.Applicative.Common           src/Options/Applicative/Common.hs:80:1-14                    5727          1    0.0    0.0     0.0    0.0
+ CAF:logFuncAccentColorsL1                      RIO.Prelude.Logger                   <no location info>                                           4473          0    0.0    0.0     0.0    0.0
+  defaultLogAccentColors                        RIO.Prelude.Logger                   src/RIO/Prelude/Logger.hs:507:1-41                           5980          1    0.0    0.0     0.0    0.0
+ CAF:logFuncSecondaryColorL1                    RIO.Prelude.Logger                   <no location info>                                           4475          0    0.0    0.0     0.0    0.0
+  defaultLogSecondaryColor                      RIO.Prelude.Logger                   src/RIO/Prelude/Logger.hs:504:1-37                           5977          1    0.0    0.0     0.0    0.0
+ CAF:lvl136_rN6b                                Options.Applicative.BashCompletion   <no location info>                                           5525          0    0.0    0.0     0.0    0.0
+  bashCompletionParser                          Options.Applicative.BashCompletion   src/Options/Applicative/BashCompletion.hs:(35,1)-(65,7)      5714          0    0.0    0.0     0.0    0.0
+   bashCompletionParser.complParser             Options.Applicative.BashCompletion   src/Options/Applicative/BashCompletion.hs:(40,5)-(65,7)      5715          0    0.0    0.0     0.0    0.0
+    long                                        Options.Applicative.Builder          src/Options/Applicative/Builder.hs:161:1-32                  5716          1    0.0    0.0     0.0    0.0
+     fieldMod                                   Options.Applicative.Builder.Internal src/Options/Applicative/Builder/Internal.hs:132:1-28         5717          1    0.0    0.0     0.0    0.0
+ CAF:lvl139_rN6e                                Options.Applicative.BashCompletion   <no location info>                                           5527          0    0.0    0.0     0.0    0.0
+  bashCompletionParser                          Options.Applicative.BashCompletion   src/Options/Applicative/BashCompletion.hs:(35,1)-(65,7)      5711          0    0.0    0.0     0.0    0.0
+   bashCompletionParser.complParser             Options.Applicative.BashCompletion   src/Options/Applicative/BashCompletion.hs:(40,5)-(65,7)      5712          0    0.0    0.0     0.0    0.0
+    <>                                          Options.Applicative.Builder.Internal src/Options/Applicative/Builder/Internal.hs:(140,3)-(141,40) 5721          1    0.0    0.0     0.0    0.0
+     <>                                         Options.Applicative.Builder.Internal src/Options/Applicative/Builder/Internal.hs:(96,3)-(97,47)   5722          1    0.0    0.0     0.0    0.0
+    flag'                                       Options.Applicative.Builder          src/Options/Applicative/Builder.hs:(319,1)-(323,43)          5724          1    0.0    0.0     0.0    0.0
+     mkParser                                   Options.Applicative.Builder.Internal src/Options/Applicative/Builder/Internal.hs:(163,1)-(167,36) 5725          1    0.0    0.0     0.0    0.0
+      mkParser.o                                Options.Applicative.Builder.Internal src/Options/Applicative/Builder/Internal.hs:165:5-34         5726          1    0.0    0.0     0.0    0.0
+ CAF:lvl151_rN6t                                Options.Applicative.BashCompletion   <no location info>                                           5535          0    0.0    0.0     0.0    0.0
+  bashCompletionParser                          Options.Applicative.BashCompletion   src/Options/Applicative/BashCompletion.hs:(35,1)-(65,7)      5709          0    0.0    0.0     0.0    0.0
+   bashCompletionParser.complParser             Options.Applicative.BashCompletion   src/Options/Applicative/BashCompletion.hs:(40,5)-(65,7)      5710          0    0.0    0.0     0.0    0.0
+ CAF:lvl158_rN6D                                Options.Applicative.BashCompletion   <no location info>                                           5542          0    0.0    0.0     0.0    0.0
+  bashCompletionParser                          Options.Applicative.BashCompletion   src/Options/Applicative/BashCompletion.hs:(35,1)-(65,7)      5707          0    0.0    0.0     0.0    0.0
+   bashCompletionParser.complParser             Options.Applicative.BashCompletion   src/Options/Applicative/BashCompletion.hs:(40,5)-(65,7)      5708          0    0.0    0.0     0.0    0.0
+ CAF:lvl159_rN6E                                Options.Applicative.BashCompletion   <no location info>                                           5543          0    0.0    0.0     0.0    0.0
+  bashCompletionParser                          Options.Applicative.BashCompletion   src/Options/Applicative/BashCompletion.hs:(35,1)-(65,7)      5728          0    0.0    0.0     0.0    0.0
+   bashCompletionParser.complParser             Options.Applicative.BashCompletion   src/Options/Applicative/BashCompletion.hs:(40,5)-(65,7)      5729          0    0.0    0.0     0.0    0.0
+ CAF:lvl160_rN6F                                Options.Applicative.BashCompletion   <no location info>                                           5544          0    0.0    0.0     0.0    0.0
+  bashCompletionParser                          Options.Applicative.BashCompletion   src/Options/Applicative/BashCompletion.hs:(35,1)-(65,7)      5705          0    0.0    0.0     0.0    0.0
+   bashCompletionParser.complParser             Options.Applicative.BashCompletion   src/Options/Applicative/BashCompletion.hs:(40,5)-(65,7)      5706          0    0.0    0.0     0.0    0.0
+ CAF:lvl164_rN6M                                Options.Applicative.BashCompletion   <no location info>                                           5547          0    0.0    0.0     0.0    0.0
+  bashCompletionParser                          Options.Applicative.BashCompletion   src/Options/Applicative/BashCompletion.hs:(35,1)-(65,7)      5759          0    0.0    0.0     0.0    0.0
+   bashCompletionParser.complParser             Options.Applicative.BashCompletion   src/Options/Applicative/BashCompletion.hs:(40,5)-(65,7)      5760          0    0.0    0.0     0.0    0.0
+    long                                        Options.Applicative.Builder          src/Options/Applicative/Builder.hs:161:1-32                  5761          1    0.0    0.0     0.0    0.0
+     fieldMod                                   Options.Applicative.Builder.Internal src/Options/Applicative/Builder/Internal.hs:132:1-28         5762          1    0.0    0.0     0.0    0.0
+ CAF:lvl165_rN6N                                Options.Applicative.BashCompletion   <no location info>                                           5548          0    0.0    0.0     0.0    0.0
+  bashCompletionParser                          Options.Applicative.BashCompletion   src/Options/Applicative/BashCompletion.hs:(35,1)-(65,7)      5757          0    0.0    0.0     0.0    0.0
+   bashCompletionParser.complParser             Options.Applicative.BashCompletion   src/Options/Applicative/BashCompletion.hs:(40,5)-(65,7)      5758          0    0.0    0.0     0.0    0.0
+    <>                                          Options.Applicative.Builder.Internal src/Options/Applicative/Builder/Internal.hs:(140,3)-(141,40) 5763          1    0.0    0.0     0.0    0.0
+     <>                                         Options.Applicative.Builder.Internal src/Options/Applicative/Builder/Internal.hs:(96,3)-(97,47)   5766          1    0.0    0.0     0.0    0.0
+ CAF:lvl166_rN6P                                Options.Applicative.BashCompletion   <no location info>                                           5550          0    0.0    0.0     0.0    0.0
+  bashCompletionParser                          Options.Applicative.BashCompletion   src/Options/Applicative/BashCompletion.hs:(35,1)-(65,7)      5735          0    0.0    0.0     0.0    0.0
+   bashCompletionParser.complParser             Options.Applicative.BashCompletion   src/Options/Applicative/BashCompletion.hs:(40,5)-(65,7)      5736          0    0.0    0.0     0.0    0.0
+    many                                        Options.Applicative.Types            src/Options/Applicative/Types.hs:300:3-26                    5737          0    0.0    0.0     0.0    0.0
+     fromM                                      Options.Applicative.Types            src/Options/Applicative/Types.hs:282:1-26                    5738          0    0.0    0.0     0.0    0.0
+      manyM                                     Options.Applicative.Types            src/Options/Applicative/Types.hs:(288,1)-(292,30)            5739          1    0.0    0.0     0.0    0.0
+       >>=                                      Options.Applicative.Types            src/Options/Applicative/Types.hs:272:3-64                    5740          1    0.0    0.0     0.0    0.0
+       fmap                                     Options.Applicative.Types            src/Options/Applicative/Types.hs:(257,3)-(261,43)            5746          1    0.0    0.0     0.0    0.0
+       oneM                                     Options.Applicative.Types            src/Options/Applicative/Types.hs:285:1-26                    5744          1    0.0    0.0     0.0    0.0
+ CAF:lvl167_rN6Q                                Options.Applicative.BashCompletion   <no location info>                                           5551          0    0.0    0.0     0.0    0.0
+  bashCompletionParser                          Options.Applicative.BashCompletion   src/Options/Applicative/BashCompletion.hs:(35,1)-(65,7)      5731          0    0.0    0.0     0.0    0.0
+   bashCompletionParser.complParser             Options.Applicative.BashCompletion   src/Options/Applicative/BashCompletion.hs:(40,5)-(65,7)      5732          0    0.0    0.0     0.0    0.0
+    many                                        Options.Applicative.Types            src/Options/Applicative/Types.hs:300:3-26                    5733          1    0.0    0.0     0.0    0.0
+     fromM                                      Options.Applicative.Types            src/Options/Applicative/Types.hs:282:1-26                    5734          1    0.0    0.0     0.0    0.0
+      manyM                                     Options.Applicative.Types            src/Options/Applicative/Types.hs:(288,1)-(292,30)            5741          0    0.0    0.0     0.0    0.0
+       >>=                                      Options.Applicative.Types            src/Options/Applicative/Types.hs:272:3-64                    5742          0    0.0    0.0     0.0    0.0
+        >>=.\                                   Options.Applicative.Types            src/Options/Applicative/Types.hs:272:37-64                   5743          1    0.0    0.0     0.0    0.0
+         >>=.\.\                                Options.Applicative.Types            src/Options/Applicative/Types.hs:272:46-63                   5779          0    0.0    0.0     0.0    0.0
+          pure                                  Options.Applicative.Types            src/Options/Applicative/Types.hs:278:3-30                    5786          0    0.0    0.0     0.0    0.0
+           pure.\                               Options.Applicative.Types            src/Options/Applicative/Types.hs:278:28-30                   5787          1    0.0    0.0     0.0    0.0
+       oneM                                     Options.Applicative.Types            src/Options/Applicative/Types.hs:285:1-26                    5745          0    0.0    0.0     0.0    0.0
+ CAF:lvl170_rN6W                                Options.Applicative.BashCompletion   <no location info>                                           5554          0    0.0    0.0     0.0    0.0
+  bashCompletionParser                          Options.Applicative.BashCompletion   src/Options/Applicative/BashCompletion.hs:(35,1)-(65,7)      5795          0    0.0    0.0     0.0    0.0
+   bashCompletionParser.complParser             Options.Applicative.BashCompletion   src/Options/Applicative/BashCompletion.hs:(40,5)-(65,7)      5796          0    0.0    0.0     0.0    0.0
+    long                                        Options.Applicative.Builder          src/Options/Applicative/Builder.hs:161:1-32                  5797          1    0.0    0.0     0.0    0.0
+     fieldMod                                   Options.Applicative.Builder.Internal src/Options/Applicative/Builder/Internal.hs:132:1-28         5798          1    0.0    0.0     0.0    0.0
+ CAF:lvl171_rN6X                                Options.Applicative.BashCompletion   <no location info>                                           5555          0    0.0    0.0     0.0    0.0
+  bashCompletionParser                          Options.Applicative.BashCompletion   src/Options/Applicative/BashCompletion.hs:(35,1)-(65,7)      5793          0    0.0    0.0     0.0    0.0
+   bashCompletionParser.complParser             Options.Applicative.BashCompletion   src/Options/Applicative/BashCompletion.hs:(40,5)-(65,7)      5794          0    0.0    0.0     0.0    0.0
+    <>                                          Options.Applicative.Builder.Internal src/Options/Applicative/Builder/Internal.hs:(140,3)-(141,40) 5799          1    0.0    0.0     0.0    0.0
+     <>                                         Options.Applicative.Builder.Internal src/Options/Applicative/Builder/Internal.hs:(96,3)-(97,47)   5802          1    0.0    0.0     0.0    0.0
+ CAF:lvl172_rN6Y                                Options.Applicative.BashCompletion   <no location info>                                           5556          0    0.0    0.0     0.0    0.0
+  bashCompletionParser                          Options.Applicative.BashCompletion   src/Options/Applicative/BashCompletion.hs:(35,1)-(65,7)      5788          0    0.0    0.0     0.0    0.0
+   bashCompletionParser.complParser             Options.Applicative.BashCompletion   src/Options/Applicative/BashCompletion.hs:(40,5)-(65,7)      5789          0    0.0    0.0     0.0    0.0
+    option                                      Options.Applicative.Builder          src/Options/Applicative/Builder.hs:(367,1)-(372,65)          5790          1    0.0    0.0     0.0    0.0
+     mkParser                                   Options.Applicative.Builder.Internal src/Options/Applicative/Builder/Internal.hs:(163,1)-(167,36) 5803          1    0.0    0.0     0.0    0.0
+      mkParser.o                                Options.Applicative.Builder.Internal src/Options/Applicative/Builder/Internal.hs:165:5-34         5804          1    0.0    0.0     0.0    0.0
+     option.(...)                               Options.Applicative.Builder          src/Options/Applicative/Builder.hs:369:5-41                  5792          1    0.0    0.0     0.0    0.0
+      <>                                        Options.Applicative.Builder.Internal src/Options/Applicative/Builder/Internal.hs:(140,3)-(141,40) 5800          1    0.0    0.0     0.0    0.0
+       <>                                       Options.Applicative.Builder.Internal src/Options/Applicative/Builder/Internal.hs:(96,3)-(97,47)   5801          1    0.0    0.0     0.0    0.0
+     option.d                                   Options.Applicative.Builder          src/Options/Applicative/Builder.hs:369:5-41                  5791          1    0.0    0.0     0.0    0.0
+ CAF:lvl175_rN74                                Options.Applicative.BashCompletion   <no location info>                                           5559          0    0.0    0.0     0.0    0.0
+  bashCompletionParser                          Options.Applicative.BashCompletion   src/Options/Applicative/BashCompletion.hs:(35,1)-(65,7)      5815          0    0.0    0.0     0.0    0.0
+   bashCompletionParser.complParser             Options.Applicative.BashCompletion   src/Options/Applicative/BashCompletion.hs:(40,5)-(65,7)      5816          0    0.0    0.0     0.0    0.0
+    long                                        Options.Applicative.Builder          src/Options/Applicative/Builder.hs:161:1-32                  5817          1    0.0    0.0     0.0    0.0
+     fieldMod                                   Options.Applicative.Builder.Internal src/Options/Applicative/Builder/Internal.hs:132:1-28         5818          1    0.0    0.0     0.0    0.0
+ CAF:lvl176_rN75                                Options.Applicative.BashCompletion   <no location info>                                           5560          0    0.0    0.0     0.0    0.0
+  bashCompletionParser                          Options.Applicative.BashCompletion   src/Options/Applicative/BashCompletion.hs:(35,1)-(65,7)      5813          0    0.0    0.0     0.0    0.0
+   bashCompletionParser.complParser             Options.Applicative.BashCompletion   src/Options/Applicative/BashCompletion.hs:(40,5)-(65,7)      5814          0    0.0    0.0     0.0    0.0
+    <>                                          Options.Applicative.Builder.Internal src/Options/Applicative/Builder/Internal.hs:(140,3)-(141,40) 5819          1    0.0    0.0     0.0    0.0
+     <>                                         Options.Applicative.Builder.Internal src/Options/Applicative/Builder/Internal.hs:(96,3)-(97,47)   5822          1    0.0    0.0     0.0    0.0
+ CAF:lvl177_rN76                                Options.Applicative.BashCompletion   <no location info>                                           5561          0    0.0    0.0     0.0    0.0
+  bashCompletionParser                          Options.Applicative.BashCompletion   src/Options/Applicative/BashCompletion.hs:(35,1)-(65,7)      5807          0    0.0    0.0     0.0    0.0
+   bashCompletionParser.complParser             Options.Applicative.BashCompletion   src/Options/Applicative/BashCompletion.hs:(40,5)-(65,7)      5808          0    0.0    0.0     0.0    0.0
+    fmap                                        Options.Applicative.Types            src/Options/Applicative/Types.hs:(257,3)-(261,43)            5825          2    0.0    0.0     0.0    0.0
+    strOption                                   Options.Applicative.Builder          src/Options/Applicative/Builder.hs:352:1-22                  5809          1    0.0    0.0     0.0    0.0
+     option                                     Options.Applicative.Builder          src/Options/Applicative/Builder.hs:(367,1)-(372,65)          5810          1    0.0    0.0     0.0    0.0
+      mkParser                                  Options.Applicative.Builder.Internal src/Options/Applicative/Builder/Internal.hs:(163,1)-(167,36) 5823          1    0.0    0.0     0.0    0.0
+       mkParser.o                               Options.Applicative.Builder.Internal src/Options/Applicative/Builder/Internal.hs:165:5-34         5824          1    0.0    0.0     0.0    0.0
+      option.(...)                              Options.Applicative.Builder          src/Options/Applicative/Builder.hs:369:5-41                  5812          1    0.0    0.0     0.0    0.0
+       <>                                       Options.Applicative.Builder.Internal src/Options/Applicative/Builder/Internal.hs:(140,3)-(141,40) 5820          1    0.0    0.0     0.0    0.0
+        <>                                      Options.Applicative.Builder.Internal src/Options/Applicative/Builder/Internal.hs:(96,3)-(97,47)   5821          1    0.0    0.0     0.0    0.0
+      option.d                                  Options.Applicative.Builder          src/Options/Applicative/Builder.hs:369:5-41                  5811          1    0.0    0.0     0.0    0.0
+ CAF:lvl180_rN7c                                Options.Applicative.BashCompletion   <no location info>                                           5564          0    0.0    0.0     0.0    0.0
+  bashCompletionParser                          Options.Applicative.BashCompletion   src/Options/Applicative/BashCompletion.hs:(35,1)-(65,7)      5836          0    0.0    0.0     0.0    0.0
+   bashCompletionParser.complParser             Options.Applicative.BashCompletion   src/Options/Applicative/BashCompletion.hs:(40,5)-(65,7)      5837          0    0.0    0.0     0.0    0.0
+    long                                        Options.Applicative.Builder          src/Options/Applicative/Builder.hs:161:1-32                  5838          1    0.0    0.0     0.0    0.0
+     fieldMod                                   Options.Applicative.Builder.Internal src/Options/Applicative/Builder/Internal.hs:132:1-28         5839          1    0.0    0.0     0.0    0.0
+ CAF:lvl181_rN7d                                Options.Applicative.BashCompletion   <no location info>                                           5565          0    0.0    0.0     0.0    0.0
+  bashCompletionParser                          Options.Applicative.BashCompletion   src/Options/Applicative/BashCompletion.hs:(35,1)-(65,7)      5834          0    0.0    0.0     0.0    0.0
+   bashCompletionParser.complParser             Options.Applicative.BashCompletion   src/Options/Applicative/BashCompletion.hs:(40,5)-(65,7)      5835          0    0.0    0.0     0.0    0.0
+    <>                                          Options.Applicative.Builder.Internal src/Options/Applicative/Builder/Internal.hs:(140,3)-(141,40) 5840          1    0.0    0.0     0.0    0.0
+     <>                                         Options.Applicative.Builder.Internal src/Options/Applicative/Builder/Internal.hs:(96,3)-(97,47)   5843          1    0.0    0.0     0.0    0.0
+ CAF:lvl182_rN7e                                Options.Applicative.BashCompletion   <no location info>                                           5566          0    0.0    0.0     0.0    0.0
+  bashCompletionParser                          Options.Applicative.BashCompletion   src/Options/Applicative/BashCompletion.hs:(35,1)-(65,7)      5828          0    0.0    0.0     0.0    0.0
+   bashCompletionParser.complParser             Options.Applicative.BashCompletion   src/Options/Applicative/BashCompletion.hs:(40,5)-(65,7)      5829          0    0.0    0.0     0.0    0.0
+    fmap                                        Options.Applicative.Types            src/Options/Applicative/Types.hs:(257,3)-(261,43)            5846          2    0.0    0.0     0.0    0.0
+    strOption                                   Options.Applicative.Builder          src/Options/Applicative/Builder.hs:352:1-22                  5830          1    0.0    0.0     0.0    0.0
+     option                                     Options.Applicative.Builder          src/Options/Applicative/Builder.hs:(367,1)-(372,65)          5831          1    0.0    0.0     0.0    0.0
+      mkParser                                  Options.Applicative.Builder.Internal src/Options/Applicative/Builder/Internal.hs:(163,1)-(167,36) 5844          1    0.0    0.0     0.0    0.0
+       mkParser.o                               Options.Applicative.Builder.Internal src/Options/Applicative/Builder/Internal.hs:165:5-34         5845          1    0.0    0.0     0.0    0.0
+      option.(...)                              Options.Applicative.Builder          src/Options/Applicative/Builder.hs:369:5-41                  5833          1    0.0    0.0     0.0    0.0
+       <>                                       Options.Applicative.Builder.Internal src/Options/Applicative/Builder/Internal.hs:(140,3)-(141,40) 5841          1    0.0    0.0     0.0    0.0
+        <>                                      Options.Applicative.Builder.Internal src/Options/Applicative/Builder/Internal.hs:(96,3)-(97,47)   5842          1    0.0    0.0     0.0    0.0
+      option.d                                  Options.Applicative.Builder          src/Options/Applicative/Builder.hs:369:5-41                  5832          1    0.0    0.0     0.0    0.0
+ CAF:lvl185_rN7k                                Options.Applicative.BashCompletion   <no location info>                                           5569          0    0.0    0.0     0.0    0.0
+  bashCompletionParser                          Options.Applicative.BashCompletion   src/Options/Applicative/BashCompletion.hs:(35,1)-(65,7)      5857          0    0.0    0.0     0.0    0.0
+   bashCompletionParser.complParser             Options.Applicative.BashCompletion   src/Options/Applicative/BashCompletion.hs:(40,5)-(65,7)      5858          0    0.0    0.0     0.0    0.0
+    long                                        Options.Applicative.Builder          src/Options/Applicative/Builder.hs:161:1-32                  5859          1    0.0    0.0     0.0    0.0
+     fieldMod                                   Options.Applicative.Builder.Internal src/Options/Applicative/Builder/Internal.hs:132:1-28         5860          1    0.0    0.0     0.0    0.0
+ CAF:lvl186_rN7l                                Options.Applicative.BashCompletion   <no location info>                                           5570          0    0.0    0.0     0.0    0.0
+  bashCompletionParser                          Options.Applicative.BashCompletion   src/Options/Applicative/BashCompletion.hs:(35,1)-(65,7)      5855          0    0.0    0.0     0.0    0.0
+   bashCompletionParser.complParser             Options.Applicative.BashCompletion   src/Options/Applicative/BashCompletion.hs:(40,5)-(65,7)      5856          0    0.0    0.0     0.0    0.0
+    <>                                          Options.Applicative.Builder.Internal src/Options/Applicative/Builder/Internal.hs:(140,3)-(141,40) 5861          1    0.0    0.0     0.0    0.0
+     <>                                         Options.Applicative.Builder.Internal src/Options/Applicative/Builder/Internal.hs:(96,3)-(97,47)   5864          1    0.0    0.0     0.0    0.0
+ CAF:lvl187_rN7m                                Options.Applicative.BashCompletion   <no location info>                                           5571          0    0.0    0.0     0.0    0.0
+  bashCompletionParser                          Options.Applicative.BashCompletion   src/Options/Applicative/BashCompletion.hs:(35,1)-(65,7)      5849          0    0.0    0.0     0.0    0.0
+   bashCompletionParser.complParser             Options.Applicative.BashCompletion   src/Options/Applicative/BashCompletion.hs:(40,5)-(65,7)      5850          0    0.0    0.0     0.0    0.0
+    fmap                                        Options.Applicative.Types            src/Options/Applicative/Types.hs:(257,3)-(261,43)            5867          2    0.0    0.0     0.0    0.0
+    strOption                                   Options.Applicative.Builder          src/Options/Applicative/Builder.hs:352:1-22                  5851          1    0.0    0.0     0.0    0.0
+     option                                     Options.Applicative.Builder          src/Options/Applicative/Builder.hs:(367,1)-(372,65)          5852          1    0.0    0.0     0.0    0.0
+      mkParser                                  Options.Applicative.Builder.Internal src/Options/Applicative/Builder/Internal.hs:(163,1)-(167,36) 5865          1    0.0    0.0     0.0    0.0
+       mkParser.o                               Options.Applicative.Builder.Internal src/Options/Applicative/Builder/Internal.hs:165:5-34         5866          1    0.0    0.0     0.0    0.0
+      option.(...)                              Options.Applicative.Builder          src/Options/Applicative/Builder.hs:369:5-41                  5854          1    0.0    0.0     0.0    0.0
+       <>                                       Options.Applicative.Builder.Internal src/Options/Applicative/Builder/Internal.hs:(140,3)-(141,40) 5862          1    0.0    0.0     0.0    0.0
+        <>                                      Options.Applicative.Builder.Internal src/Options/Applicative/Builder/Internal.hs:(96,3)-(97,47)   5863          1    0.0    0.0     0.0    0.0
+      option.d                                  Options.Applicative.Builder          src/Options/Applicative/Builder.hs:369:5-41                  5853          1    0.0    0.0     0.0    0.0
+ CAF:lvl188_rN7n                                Options.Applicative.BashCompletion   <no location info>                                           5572          0    0.0    0.0     0.0    0.0
+  bashCompletionParser                          Options.Applicative.BashCompletion   src/Options/Applicative/BashCompletion.hs:(35,1)-(65,7)      5847          0    0.0    0.0     0.0    0.0
+   bashCompletionParser.complParser             Options.Applicative.BashCompletion   src/Options/Applicative/BashCompletion.hs:(40,5)-(65,7)      5848          0    0.0    0.0     0.0    0.0
+ CAF:lvl189_rN7o                                Options.Applicative.BashCompletion   <no location info>                                           5573          0    0.0    0.0     0.0    0.0
+  bashCompletionParser                          Options.Applicative.BashCompletion   src/Options/Applicative/BashCompletion.hs:(35,1)-(65,7)      5826          0    0.0    0.0     0.0    0.0
+   bashCompletionParser.complParser             Options.Applicative.BashCompletion   src/Options/Applicative/BashCompletion.hs:(40,5)-(65,7)      5827          0    0.0    0.0     0.0    0.0
+ CAF:lvl190_rN7p                                Options.Applicative.BashCompletion   <no location info>                                           5574          0    0.0    0.0     0.0    0.0
+  bashCompletionParser                          Options.Applicative.BashCompletion   src/Options/Applicative/BashCompletion.hs:(35,1)-(65,7)      5805          0    0.0    0.0     0.0    0.0
+   bashCompletionParser.complParser             Options.Applicative.BashCompletion   src/Options/Applicative/BashCompletion.hs:(40,5)-(65,7)      5806          0    0.0    0.0     0.0    0.0
+ CAF:lvl20_rfie                                 Options.Applicative.Types            <no location info>                                           5295          0    0.0    0.0     0.0    0.0
+  manyM                                         Options.Applicative.Types            src/Options/Applicative/Types.hs:(288,1)-(292,30)            5780          0    0.0    0.0     0.0    0.0
+   >>=                                          Options.Applicative.Types            src/Options/Applicative/Types.hs:272:3-64                    5781          0    0.0    0.0     0.0    0.0
+    >>=.\                                       Options.Applicative.Types            src/Options/Applicative/Types.hs:272:37-64                   5782          0    0.0    0.0     0.0    0.0
+     >>=.\.\                                    Options.Applicative.Types            src/Options/Applicative/Types.hs:272:46-63                   5783          0    0.0    0.0     0.0    0.0
+      pure                                      Options.Applicative.Types            src/Options/Applicative/Types.hs:278:3-30                    5785          1    0.0    0.0     0.0    0.0
+ CAF:lvl21_rfif                                 Options.Applicative.Types            <no location info>                                           5300          0    0.0    0.0     0.0    0.0
+  manyM                                         Options.Applicative.Types            src/Options/Applicative/Types.hs:(288,1)-(292,30)            5769          0    0.0    0.0     0.0    0.0
+ CAF:lvl30_rCNI                                 RIO.Prelude.Logger                   <no location info>                                           4516          0    0.0    0.0     0.0    0.0
+  simpleLogFunc                                 RIO.Prelude.Logger                   src/RIO/Prelude/Logger.hs:(626,1)-(684,25)                   6061          0    0.0    0.0     0.0    0.0
+   simpleLogFunc.getSource                      RIO.Prelude.Logger                   src/RIO/Prelude/Logger.hs:(677,4)-(679,37)                   6062          0    0.0    0.0     0.0    0.0
+ CAF:lvl36_r12yK                                RIO.Process                          <no location info>                                           4631          0    0.0    0.0     0.0    0.0
+  mkProcessContext                              RIO.Process                          src/RIO/Process.hs:(272,1)-(298,76)                          6010          0    0.0    0.0     0.0    0.0
+ CAF:lvl38_rCNQ                                 RIO.Prelude.Logger                   <no location info>                                           4521          0    0.0    0.0     0.0    0.0
+ CAF:lvl39_rCNR                                 RIO.Prelude.Logger                   <no location info>                                           4522          0    0.0    0.0     0.0    0.0
+  simpleLogFunc                                 RIO.Prelude.Logger                   src/RIO/Prelude/Logger.hs:(626,1)-(684,25)                   6085          0    0.0    0.0     0.0    0.0
+ CAF:lvl40_rCNS                                 RIO.Prelude.Logger                   <no location info>                                           4523          0    0.0    0.0     0.0    0.0
+  mempty                                        RIO.Prelude.Display                  src/RIO/Prelude/Display.hs:38:3-29                           6043          1    0.0    0.0     0.0    0.0
+ CAF:lvl48_rCO0                                 RIO.Prelude.Logger                   <no location info>                                           4528          0    0.0    0.0     0.0    0.0
+  simpleLogFunc                                 RIO.Prelude.Logger                   src/RIO/Prelude/Logger.hs:(626,1)-(684,25)                   6051          0    0.0    0.0     0.0    0.0
+   simpleLogFunc.ansi                           RIO.Prelude.Logger                   src/RIO/Prelude/Logger.hs:(649,4)-(650,31)                   6052          0    0.0    0.0     0.0    0.0
+    mempty                                      RIO.Prelude.Display                  src/RIO/Prelude/Display.hs:38:3-29                           6053          1    0.0    0.0     0.0    0.0
+ CAF:lvl49_rCO1                                 RIO.Prelude.Logger                   <no location info>                                           4529          0    0.0    0.0     0.0    0.0
+  simpleLogFunc                                 RIO.Prelude.Logger                   src/RIO/Prelude/Logger.hs:(626,1)-(684,25)                   6045          0    0.0    0.0     0.0    0.0
+   simpleLogFunc.getLevel                       RIO.Prelude.Logger                   src/RIO/Prelude/Logger.hs:(663,4)-(674,25)                   6046          0    0.0    0.0     0.0    0.0
+    mempty                                      RIO.Prelude.Display                  src/RIO/Prelude/Display.hs:38:3-29                           6047          1    0.0    0.0     0.0    0.0
+ CAF:lvl50_rCO2                                 RIO.Prelude.Logger                   <no location info>                                           4530          0    0.0    0.0     0.0    0.0
+  simpleLogFunc                                 RIO.Prelude.Logger                   src/RIO/Prelude/Logger.hs:(626,1)-(684,25)                   6075          0    0.0    0.0     0.0    0.0
+   simpleLogFunc.getLoc                         RIO.Prelude.Logger                   src/RIO/Prelude/Logger.hs:(682,4)-(684,25)                   6076          0    0.0    0.0     0.0    0.0
+    mempty                                      RIO.Prelude.Display                  src/RIO/Prelude/Display.hs:38:3-29                           6077          1    0.0    0.0     0.0    0.0
+ CAF:lvl64_rCOs                                 RIO.Prelude.Logger                   <no location info>                                           4538          0    0.0    0.0     0.0    0.0
+ CAF:lvl72_rCOB                                 RIO.Prelude.Logger                   <no location info>                                           4544          0    0.0    0.0     0.0    0.0
+  newLogFunc                                    RIO.Prelude.Logger                   src/RIO/Prelude/Logger.hs:(405,1)-(422,12)                   5982          0    0.0    0.0     0.0    0.0
+   newMVar                                      UnliftIO.MVar                        src/UnliftIO/MVar.hs:40:1-28                                 5983          1    0.0    0.0     0.0    0.0
+ CAF:main1                                      Main                                 <no location info>                                           5632          0    0.0    0.0     0.0    0.0
+  main                                          Main                                 app/Main.hs:(12,1)-(32,22)                                   5660          1    0.0    0.0     0.0    0.0
+ CAF:main14                                     Day23                                <no location info>                                           4674          0    0.0    0.0     1.3    1.7
+  main                                          Day23                                src/Day23.hs:(33,1)-(37,63)                                  6210          0    0.0    0.0     1.3    1.7
+   main.example                                 Day23                                src/Day23.hs:35:9-59                                         6211          0    1.3    1.7     1.3    1.7
+ CAF:main2                                      Main                                 <no location info>                                           5631          0    0.0    0.0     0.0    0.0
+  main                                          Main                                 app/Main.hs:(12,1)-(32,22)                                   5662          0    0.0    0.0     0.0    0.0
+   simpleOptions                                Options.Applicative.Simple           src/Options/Applicative/Simple.hs:(71,1)-(82,33)             5663          1    0.0    0.0     0.0    0.0
+ CAF:main3                                      Day23                                <no location info>                                           4680          0    0.0    0.0     0.0    0.0
+  main                                          Day23                                src/Day23.hs:(33,1)-(37,63)                                  6196          0    0.0    0.0     0.0    0.0
+   displayShow                                  RIO.Prelude.Display                  src/RIO/Prelude/Display.hs:137:1-31                          6197          1    0.0    0.0     0.0    0.0
+ CAF:main37                                     Day23                                <no location info>                                           4677          0    0.0    0.0     0.0    0.0
+  main                                          Day23                                src/Day23.hs:(33,1)-(37,63)                                  6163          0    0.0    0.0     0.0    0.0
+   displayShow                                  RIO.Prelude.Display                  src/RIO/Prelude/Display.hs:137:1-31                          6164          1    0.0    0.0     0.0    0.0
+ CAF:main38                                     Day23                                <no location info>                                           4676          0    0.0    0.0     0.0    0.0
+  main                                          Day23                                src/Day23.hs:(33,1)-(37,63)                                  6168          0    0.0    0.0     0.0    0.0
+   displayShow                                  RIO.Prelude.Display                  src/RIO/Prelude/Display.hs:137:1-31                          6169          0    0.0    0.0     0.0    0.0
+ CAF:main4                                      Day23                                <no location info>                                           4679          0    0.0    0.0     0.0    0.0
+  main                                          Day23                                src/Day23.hs:(33,1)-(37,63)                                  6198          0    0.0    0.0     0.0    0.0
+   displayShow                                  RIO.Prelude.Display                  src/RIO/Prelude/Display.hs:137:1-31                          6199          0    0.0    0.0     0.0    0.0
+ CAF:main5                                      Main                                 <no location info>                                           5630          0    0.0    0.0     0.0    0.0
+  main                                          Main                                 app/Main.hs:(12,1)-(32,22)                                   5930          0    0.0    0.0     0.0    0.0
+   fmap                                         Options.Applicative.Types            src/Options/Applicative/Types.hs:(257,3)-(261,43)            5934          3    0.0    0.0     0.0    0.0
+   switch                                       Options.Applicative.Builder          src/Options/Applicative/Builder.hs:333:1-24                  5932          0    0.0    0.0     0.0    0.0
+    flag                                        Options.Applicative.Builder          src/Options/Applicative/Builder.hs:299:1-45                  5933          1    0.0    0.0     0.0    0.0
+     flag'                                      Options.Applicative.Builder          src/Options/Applicative/Builder.hs:(319,1)-(323,43)          5944          1    0.0    0.0     0.0    0.0
+      mkParser                                  Options.Applicative.Builder.Internal src/Options/Applicative/Builder/Internal.hs:(163,1)-(167,36) 5945          1    0.0    0.0     0.0    0.0
+       mkParser.o                               Options.Applicative.Builder.Internal src/Options/Applicative/Builder/Internal.hs:165:5-34         5946          1    0.0    0.0     0.0    0.0
+ CAF:main6                                      Main                                 <no location info>                                           5629          0    0.0    0.0     0.0    0.0
+  main                                          Main                                 app/Main.hs:(12,1)-(32,22)                                   5935          0    0.0    0.0     0.0    0.0
+   <>                                           Options.Applicative.Builder.Internal src/Options/Applicative/Builder/Internal.hs:(140,3)-(141,40) 5942          2    0.0    0.0     0.0    0.0
+    <>                                          Options.Applicative.Builder.Internal src/Options/Applicative/Builder/Internal.hs:(96,3)-(97,47)   5943          2    0.0    0.0     0.0    0.0
+   help                                         Options.Applicative.Builder          src/Options/Applicative/Builder.hs:185:1-55                  5940          1    0.0    0.0     0.0    0.0
+    optionMod                                   Options.Applicative.Builder.Internal src/Options/Applicative/Builder/Internal.hs:129:1-25         5941          0    0.0    0.0     0.0    0.0
+   long                                         Options.Applicative.Builder          src/Options/Applicative/Builder.hs:161:1-32                  5936          1    0.0    0.0     0.0    0.0
+    fieldMod                                    Options.Applicative.Builder.Internal src/Options/Applicative/Builder/Internal.hs:132:1-28         5937          1    0.0    0.0     0.0    0.0
+   short                                        Options.Applicative.Builder          src/Options/Applicative/Builder.hs:157:1-34                  5938          1    0.0    0.0     0.0    0.0
+    fieldMod                                    Options.Applicative.Builder.Internal src/Options/Applicative/Builder/Internal.hs:132:1-28         5939          1    0.0    0.0     0.0    0.0
+ CAF:main_x                                     Day23                                <no location info>                                           4678          0    0.0    0.0    98.7   98.3
+  main                                          Day23                                src/Day23.hs:(33,1)-(37,63)                                  6200          0    0.0    0.0    98.7   98.3
+   stepMany                                     Day23                                src/Day23.hs:(40,1)-(41,39)                                  6201         21    0.0    0.0    98.7   98.3
+    step                                        Day23                                src/Day23.hs:(44,1)-(55,17)                                  6202         20   19.0   25.0    98.7   98.3
+     step.(...)                                 Day23                                src/Day23.hs:53:9-33                                         6204         20    0.0    0.0    59.0   51.0
+      step.nexts                                Day23                                src/Day23.hs:(50,9)-(52,44)                                  6205         24   59.0   51.0    59.0   51.0
+       step.rot                                 Day23                                src/Day23.hs:(47,9)-(49,17)                                  6212          4    0.0    0.0     0.0    0.0
+     step.l                                     Day23                                src/Day23.hs:53:9-33                                         6207         20    0.0    0.0     0.0    0.0
+     step.pickUp                                Day23                                src/Day23.hs:45:9-26                                         6206         20    0.0    0.0     0.0    0.0
+     step.res                                   Day23                                src/Day23.hs:54:9-30                                         6208         20   20.7   22.3    20.7   22.3
+     step.rest                                  Day23                                src/Day23.hs:46:9-24                                         6203         20    0.0    0.0     0.0    0.0
+     step.r                                     Day23                                src/Day23.hs:53:9-33                                         6209          2    0.0    0.0     0.0    0.0
+ CAF:main_x1                                    Day23                                <no location info>                                           4675          0    0.0    0.0     0.0    0.0
+  main                                          Day23                                src/Day23.hs:(33,1)-(37,63)                                  6170          0    0.0    0.0     0.0    0.0
+   stepMany                                     Day23                                src/Day23.hs:(40,1)-(41,39)                                  6171        101    0.0    0.0     0.0    0.0
+    step                                        Day23                                src/Day23.hs:(44,1)-(55,17)                                  6172        100    0.0    0.0     0.0    0.0
+     step.(...)                                 Day23                                src/Day23.hs:53:9-33                                         6174        100    0.0    0.0     0.0    0.0
+      step.nexts                                Day23                                src/Day23.hs:(50,9)-(52,44)                                  6175        142    0.0    0.0     0.0    0.0
+       step.rot                                 Day23                                src/Day23.hs:(47,9)-(49,17)                                  6180         42    0.0    0.0     0.0    0.0
+     step.l                                     Day23                                src/Day23.hs:53:9-33                                         6177        100    0.0    0.0     0.0    0.0
+     step.pickUp                                Day23                                src/Day23.hs:45:9-26                                         6176        100    0.0    0.0     0.0    0.0
+     step.r                                     Day23                                src/Day23.hs:53:9-33                                         6179        100    0.0    0.0     0.0    0.0
+     step.res                                   Day23                                src/Day23.hs:54:9-30                                         6178        100    0.0    0.0     0.0    0.0
+     step.rest                                  Day23                                src/Day23.hs:46:9-24                                         6173        100    0.0    0.0     0.0    0.0
+ CAF:option2                                    Options.Applicative.Builder          <no location info>                                           5438          0    0.0    0.0     0.0    0.0
+  option                                        Options.Applicative.Builder          src/Options/Applicative/Builder.hs:(367,1)-(372,65)          5753          0    0.0    0.0     0.0    0.0
+   option.(...)                                 Options.Applicative.Builder          src/Options/Applicative/Builder.hs:369:5-41                  5754          0    0.0    0.0     0.0    0.0
+    metavar                                     Options.Applicative.Builder          src/Options/Applicative/Builder.hs:201:1-55                  5755          1    0.0    0.0     0.0    0.0
+     optionMod                                  Options.Applicative.Builder.Internal src/Options/Applicative/Builder/Internal.hs:129:1-25         5756          0    0.0    0.0     0.0    0.0
+ CAF:optionMod                                  Options.Applicative.Builder.Internal src/Options/Applicative/Builder/Internal.hs:129:1-9          5405          0    0.0    0.0     0.0    0.0
+  optionMod                                     Options.Applicative.Builder.Internal src/Options/Applicative/Builder/Internal.hs:129:1-25         5719          1    0.0    0.0     0.0    0.0
+ CAF:p_rN6O                                     Options.Applicative.BashCompletion   <no location info>                                           5549          0    0.0    0.0     0.0    0.0
+  bashCompletionParser                          Options.Applicative.BashCompletion   src/Options/Applicative/BashCompletion.hs:(35,1)-(65,7)      5747          0    0.0    0.0     0.0    0.0
+   bashCompletionParser.complParser             Options.Applicative.BashCompletion   src/Options/Applicative/BashCompletion.hs:(40,5)-(65,7)      5748          0    0.0    0.0     0.0    0.0
+    strOption                                   Options.Applicative.Builder          src/Options/Applicative/Builder.hs:352:1-22                  5749          1    0.0    0.0     0.0    0.0
+     option                                     Options.Applicative.Builder          src/Options/Applicative/Builder.hs:(367,1)-(372,65)          5750          1    0.0    0.0     0.0    0.0
+      mkParser                                  Options.Applicative.Builder.Internal src/Options/Applicative/Builder/Internal.hs:(163,1)-(167,36) 5767          1    0.0    0.0     0.0    0.0
+       mkParser.o                               Options.Applicative.Builder.Internal src/Options/Applicative/Builder/Internal.hs:165:5-34         5768          1    0.0    0.0     0.0    0.0
+      option.(...)                              Options.Applicative.Builder          src/Options/Applicative/Builder.hs:369:5-41                  5752          1    0.0    0.0     0.0    0.0
+       <>                                       Options.Applicative.Builder.Internal src/Options/Applicative/Builder/Internal.hs:(140,3)-(141,40) 5764          1    0.0    0.0     0.0    0.0
+        <>                                      Options.Applicative.Builder.Internal src/Options/Applicative/Builder/Internal.hs:(96,3)-(97,47)   5765          1    0.0    0.0     0.0    0.0
+      option.d                                  Options.Applicative.Builder          src/Options/Applicative/Builder.hs:369:5-41                  5751          1    0.0    0.0     0.0    0.0
+ CAF:run1                                       Run                                  <no location info>                                           4666          0    0.0    0.0     0.0    0.0
+  run                                           Run                                  src/Run.hs:(9,1)-(11,6)                                      5987          1    0.0    0.0     0.0    0.0
+   main                                         Day23                                src/Day23.hs:(33,1)-(37,63)                                  6088          1    0.0    0.0     0.0    0.0
+    main.example                                Day23                                src/Day23.hs:35:9-59                                         6090          1    0.0    0.0     0.0    0.0
+    main.input                                  Day23                                src/Day23.hs:34:9-43                                         6089          1    0.0    0.0     0.0    0.0
+ CAF:run10                                      Run                                  <no location info>                                           4657          0    0.0    0.0     0.0    0.0
+ CAF:run2                                       Run                                  <no location info>                                           4665          0    0.0    0.0     0.0    0.0
+  run                                           Run                                  src/Run.hs:(9,1)-(11,6)                                      6091          0    0.0    0.0     0.0    0.0
+   main                                         Day23                                src/Day23.hs:(33,1)-(37,63)                                  6092          0    0.0    0.0     0.0    0.0
+    logInfo                                     RIO.Prelude.Logger                   src/RIO/Prelude/Logger.hs:185:1-33                           6094          2    0.0    0.0     0.0    0.0
+ CAF:run23                                      Run                                  <no location info>                                           4656          0    0.0    0.0     0.0    0.0
+  run                                           Run                                  src/Run.hs:(9,1)-(11,6)                                      5996          0    0.0    0.0     0.0    0.0
+   logInfo                                      RIO.Prelude.Logger                   src/RIO/Prelude/Logger.hs:185:1-33                           5997          0    0.0    0.0     0.0    0.0
+    logGeneric                                  RIO.Prelude.Logger                   src/RIO/Prelude/Logger.hs:(165,1)-(167,42)                   5998          0    0.0    0.0     0.0    0.0
+ CAF:run24                                      Run                                  <no location info>                                           4655          0    0.0    0.0     0.0    0.0
+  logFuncL                                      Types                                src/Types.hs:20:3-59                                         6000          1    0.0    0.0     0.0    0.0
+ CAF:run3                                       Run                                  <no location info>                                           4664          0    0.0    0.0     0.0    0.0
+  run                                           Run                                  src/Run.hs:(9,1)-(11,6)                                      6192          0    0.0    0.0     0.0    0.0
+   main                                         Day23                                src/Day23.hs:(33,1)-(37,63)                                  6193          0    0.0    0.0     0.0    0.0
+    logInfo                                     RIO.Prelude.Logger                   src/RIO/Prelude/Logger.hs:185:1-33                           6194          0    0.0    0.0     0.0    0.0
+     logGeneric                                 RIO.Prelude.Logger                   src/RIO/Prelude/Logger.hs:(165,1)-(167,42)                   6195          1    0.0    0.0     0.0    0.0
+ CAF:run4                                       Run                                  <no location info>                                           4661          0    0.0    0.0     0.0    0.0
+  logFuncL                                      Types                                src/Types.hs:20:3-59                                         6106          1    0.0    0.0     0.0    0.0
+ CAF:run6                                       Run                                  <no location info>                                           4663          0    0.0    0.0     0.0    0.0
+  run                                           Run                                  src/Run.hs:(9,1)-(11,6)                                      6095          0    0.0    0.0     0.0    0.0
+   main                                         Day23                                src/Day23.hs:(33,1)-(37,63)                                  6096          0    0.0    0.0     0.0    0.0
+    logInfo                                     RIO.Prelude.Logger                   src/RIO/Prelude/Logger.hs:185:1-33                           6097          0    0.0    0.0     0.0    0.0
+     logGeneric                                 RIO.Prelude.Logger                   src/RIO/Prelude/Logger.hs:(165,1)-(167,42)                   6098          1    0.0    0.0     0.0    0.0
+ CAF:run7                                       Run                                  <no location info>                                           4659          0    0.0    0.0     0.0    0.0
+  run                                           Run                                  src/Run.hs:(9,1)-(11,6)                                      5990          0    0.0    0.0     0.0    0.0
+   logInfo                                      RIO.Prelude.Logger                   src/RIO/Prelude/Logger.hs:185:1-33                           5991          1    0.0    0.0     0.0    0.0
+    logGeneric                                  RIO.Prelude.Logger                   src/RIO/Prelude/Logger.hs:(165,1)-(167,42)                   5992          1    0.0    0.0     0.0    0.0
+ CAF:run9                                       Run                                  <no location info>                                           4658          0    0.0    0.0     0.0    0.0
+  run                                           Run                                  src/Run.hs:(9,1)-(11,6)                                      6072          0    0.0    0.0     0.0    0.0
+ CAF:run_lvl86                                  Run                                  <no location info>                                           4662          0    0.0    0.0     0.0    0.0
+  run                                           Run                                  src/Run.hs:(9,1)-(11,6)                                      6102          0    0.0    0.0     0.0    0.0
+   main                                         Day23                                src/Day23.hs:(33,1)-(37,63)                                  6103          0    0.0    0.0     0.0    0.0
+    logInfo                                     RIO.Prelude.Logger                   src/RIO/Prelude/Logger.hs:185:1-33                           6104          0    0.0    0.0     0.0    0.0
+     logGeneric                                 RIO.Prelude.Logger                   src/RIO/Prelude/Logger.hs:(165,1)-(167,42)                   6105          0    0.0    0.0     0.0    0.0
+ CAF:simpleOptions10                            Options.Applicative.Simple           <no location info>                                           5585          0    0.0    0.0     0.0    0.0
+  simpleOptions                                 Options.Applicative.Simple           src/Options/Applicative/Simple.hs:(71,1)-(82,33)             5888          0    0.0    0.0     0.0    0.0
+   simpleOptions.versionOption                  Options.Applicative.Simple           src/Options/Applicative/Simple.hs:(78,9)-(82,33)             5889          0    0.0    0.0     0.0    0.0
+    <>                                          Options.Applicative.Builder.Internal src/Options/Applicative/Builder/Internal.hs:(140,3)-(141,40) 5894          1    0.0    0.0     0.0    0.0
+     <>                                         Options.Applicative.Builder.Internal src/Options/Applicative/Builder/Internal.hs:(96,3)-(97,47)   5898          1    0.0    0.0     0.0    0.0
+    help                                        Options.Applicative.Builder          src/Options/Applicative/Builder.hs:185:1-55                  5892          1    0.0    0.0     0.0    0.0
+     optionMod                                  Options.Applicative.Builder.Internal src/Options/Applicative/Builder/Internal.hs:129:1-25         5893          0    0.0    0.0     0.0    0.0
+    long                                        Options.Applicative.Builder          src/Options/Applicative/Builder.hs:161:1-32                  5890          1    0.0    0.0     0.0    0.0
+     fieldMod                                   Options.Applicative.Builder.Internal src/Options/Applicative/Builder/Internal.hs:132:1-28         5891          1    0.0    0.0     0.0    0.0
+ CAF:simpleOptions9                             Options.Applicative.Simple           <no location info>                                           5586          0    0.0    0.0     0.0    0.0
+  simpleOptions                                 Options.Applicative.Simple           src/Options/Applicative/Simple.hs:(71,1)-(82,33)             5684          0    0.0    0.0     0.0    0.0
+   simpleOptions.desc                           Options.Applicative.Simple           src/Options/Applicative/Simple.hs:77:9-50                    5685          0    0.0    0.0     0.0    0.0
+    <>                                          Options.Applicative.Builder          src/Options/Applicative/Builder.hs:383:3-56                  5686          0    0.0    0.0     0.0    0.0
+     applyInfoMod                               Options.Applicative.Builder          src/Options/Applicative/Builder.hs:376:5-16                  5687          1    0.0    0.0     0.0    0.0
+ CAF:simpleParser1                              Options.Applicative.Simple           <no location info>                                           5580          0    0.0    0.0     0.0    0.0
+  simpleParser                                  Options.Applicative.Simple           src/Options/Applicative/Simple.hs:(170,1)-(184,32)           5903          0    0.0    0.0     0.0    0.0
+   simpleParser.helpOption                      Options.Applicative.Simple           src/Options/Applicative/Simple.hs:(172,9)-(179,36)           5904          1    0.0    0.0     0.0    0.0
+ CAF:simpleParser2                              Options.Applicative.Simple           <no location info>                                           5579          0    0.0    0.0     0.0    0.0
+  simpleParser                                  Options.Applicative.Simple           src/Options/Applicative/Simple.hs:(170,1)-(184,32)           5905          0    0.0    0.0     0.0    0.0
+   simpleParser.helpOption                      Options.Applicative.Simple           src/Options/Applicative/Simple.hs:(172,9)-(179,36)           5906          0    0.0    0.0     0.0    0.0
+    abortOption                                 Options.Applicative.Builder          src/Options/Applicative/Builder.hs:(341,1)-(344,16)          5907          1    0.0    0.0     0.0    0.0
+     <>                                         Options.Applicative.Builder.Internal src/Options/Applicative/Builder/Internal.hs:(140,3)-(141,40) 5913          4    0.0    0.0     0.0    0.0
+      <>                                        Options.Applicative.Builder.Internal src/Options/Applicative/Builder/Internal.hs:(96,3)-(97,47)   5923          4    0.0    0.0     0.0    0.0
+     noArgError                                 Options.Applicative.Builder          src/Options/Applicative/Builder.hs:194:1-61                  5911          1    0.0    0.0     0.0    0.0
+      fieldMod                                  Options.Applicative.Builder.Internal src/Options/Applicative/Builder/Internal.hs:132:1-28         5912          1    0.0    0.0     0.0    0.0
+     option                                     Options.Applicative.Builder          src/Options/Applicative/Builder.hs:(367,1)-(372,65)          5908          1    0.0    0.0     0.0    0.0
+      mkParser                                  Options.Applicative.Builder.Internal src/Options/Applicative/Builder/Internal.hs:(163,1)-(167,36) 5925          1    0.0    0.0     0.0    0.0
+       mkParser.\                               Options.Applicative.Builder.Internal src/Options/Applicative/Builder/Internal.hs:167:20-31        5926          1    0.0    0.0     0.0    0.0
+       mkParser.o                               Options.Applicative.Builder.Internal src/Options/Applicative/Builder/Internal.hs:165:5-34         5927          1    0.0    0.0     0.0    0.0
+      option.(...)                              Options.Applicative.Builder          src/Options/Applicative/Builder.hs:369:5-41                  5910          1    0.0    0.0     0.0    0.0
+       <>                                       Options.Applicative.Builder.Internal src/Options/Applicative/Builder/Internal.hs:(140,3)-(141,40) 5921          1    0.0    0.0     0.0    0.0
+        <>                                      Options.Applicative.Builder.Internal src/Options/Applicative/Builder/Internal.hs:(96,3)-(97,47)   5922          1    0.0    0.0     0.0    0.0
+      option.d                                  Options.Applicative.Builder          src/Options/Applicative/Builder.hs:369:5-41                  5909          1    0.0    0.0     0.0    0.0
+ CAF:simpleParser3                              Options.Applicative.Simple           <no location info>                                           5578          0    0.0    0.0     0.0    0.0
+  simpleParser                                  Options.Applicative.Simple           src/Options/Applicative/Simple.hs:(170,1)-(184,32)           5914          0    0.0    0.0     0.0    0.0
+   simpleParser.helpOption                      Options.Applicative.Simple           src/Options/Applicative/Simple.hs:(172,9)-(179,36)           5915          0    0.0    0.0     0.0    0.0
+    <>                                          Options.Applicative.Builder.Internal src/Options/Applicative/Builder/Internal.hs:(140,3)-(141,40) 5920          1    0.0    0.0     0.0    0.0
+     <>                                         Options.Applicative.Builder.Internal src/Options/Applicative/Builder/Internal.hs:(96,3)-(97,47)   5924          1    0.0    0.0     0.0    0.0
+    help                                        Options.Applicative.Builder          src/Options/Applicative/Builder.hs:185:1-55                  5918          1    0.0    0.0     0.0    0.0
+     optionMod                                  Options.Applicative.Builder.Internal src/Options/Applicative/Builder/Internal.hs:129:1-25         5919          0    0.0    0.0     0.0    0.0
+    long                                        Options.Applicative.Builder          src/Options/Applicative/Builder.hs:161:1-32                  5916          1    0.0    0.0     0.0    0.0
+     fieldMod                                   Options.Applicative.Builder.Internal src/Options/Applicative/Builder/Internal.hs:132:1-28         5917          1    0.0    0.0     0.0    0.0
+ CAF:switch                                     Options.Applicative.Builder          src/Options/Applicative/Builder.hs:333:1-6                   5446          0    0.0    0.0     0.0    0.0
+  switch                                        Options.Applicative.Builder          src/Options/Applicative/Builder.hs:333:1-24                  5931          1    0.0    0.0     0.0    0.0
+ CAF:switch1                                    Options.Applicative.Builder          <no location info>                                           5445          0    0.0    0.0     0.0    0.0
+  switch                                        Options.Applicative.Builder          src/Options/Applicative/Builder.hs:333:1-24                  5947          0    0.0    0.0     0.0    0.0
+   flag                                         Options.Applicative.Builder          src/Options/Applicative/Builder.hs:299:1-45                  5948          0    0.0    0.0     0.0    0.0
+ main                                           Main                                 app/Main.hs:(12,1)-(32,22)                                   5661          0    0.0    0.0     0.1    0.0
+  logOptionsHandle                              RIO.Prelude.Logger                   src/RIO/Prelude/Logger.hs:(353,1)-(384,5)                    5959          1    0.0    0.0     0.0    0.0
+   canUseUtf8                                   RIO.Prelude.Logger                   src/RIO/Prelude/Logger.hs:(305,1)-(307,60)                   5961          1    0.0    0.0     0.0    0.0
+    canUseUtf8.\                                RIO.Prelude.Logger                   src/RIO/Prelude/Logger.hs:(305,68)-(307,60)                  5962          1    0.0    0.0     0.0    0.0
+   hIsTerminalDevice                            UnliftIO.IO                          src/UnliftIO/IO.hs:142:1-49                                  5960          1    0.0    0.0     0.0    0.0
+  mkDefaultProcessContext                       RIO.Process                          src/RIO/Process.hs:(314,1)-(318,48)                          5963          1    0.0    0.0     0.0    0.0
+   mkProcessContext                             RIO.Process                          src/RIO/Process.hs:(272,1)-(298,76)                          5964          1    0.0    0.0     0.0    0.0
+    mkProcessContext.tm                         RIO.Process                          src/RIO/Process.hs:(291,5)-(293,25)                          6007          1    0.0    0.0     0.0    0.0
+    newIORef                                    UnliftIO.IORef                       src/UnliftIO/IORef.hs:26:1-30                                5965          1    0.0    0.0     0.0    0.0
+  optionsVerbose                                Types                                src/Types.hs:9:5-18                                          5975          1    0.0    0.0     0.0    0.0
+  withLogFunc                                   RIO.Prelude.Logger                   src/RIO/Prelude/Logger.hs:(443,1)-(446,29)                   5966          1    0.0    0.0     0.1    0.0
+   withRunInIO                                  Control.Monad.IO.Unlift              src/Control/Monad/IO/Unlift.hs:80:3-30                       5967          5    0.0    0.0     0.1    0.0
+    withLogFunc.\                               RIO.Prelude.Logger                   src/RIO/Prelude/Logger.hs:(443,51)-(446,29)                  5968          1    0.0    0.0     0.1    0.0
+     bracket                                    UnliftIO.Exception                   src/UnliftIO/Exception.hs:(281,1)-(296,14)                   5969          1    0.0    0.0     0.1    0.0
+      bracket.\                                 UnliftIO.Exception                   src/UnliftIO/Exception.hs:(281,52)-(296,14)                  5970          1    0.0    0.0     0.1    0.0
+       bracket.\.\                              UnliftIO.Exception                   src/UnliftIO/Exception.hs:(281,79)-(296,14)                  5971          1    0.0    0.0     0.1    0.0
+        main.\                                  Main                                 app/Main.hs:(27,5)-(32,22)                                   5985          1    0.0    0.0     0.1    0.0
+         main.\.app                             Main                                 app/Main.hs:(27,9)-(31,11)                                   6006          1    0.0    0.0     0.0    0.0
+         runRIO                                 RIO.Prelude.RIO                      src/RIO/Prelude/RIO.hs:52:1-45                               5986          1    0.0    0.0     0.1    0.0
+          run                                   Run                                  src/Run.hs:(9,1)-(11,6)                                      5989          0    0.0    0.0     0.1    0.0
+           logInfo                              RIO.Prelude.Logger                   src/RIO/Prelude/Logger.hs:185:1-33                           5994          0    0.0    0.0     0.1    0.0
+            logGeneric                          RIO.Prelude.Logger                   src/RIO/Prelude/Logger.hs:(165,1)-(167,42)                   5995          0    0.0    0.0     0.1    0.0
+             logFuncL                           Types                                src/Types.hs:20:3-59                                         6001          0    0.0    0.0     0.0    0.0
+              appLogFunc                        Types                                src/Types.hs:13:5-14                                         6005          1    0.0    0.0     0.0    0.0
+             newLogFunc                         RIO.Prelude.Logger                   src/RIO/Prelude/Logger.hs:(405,1)-(422,12)                   6012          0    0.0    0.0     0.1    0.0
+              stickyImpl                        RIO.Prelude.Logger                   src/RIO/Prelude/Logger.hs:(714,1)-(740,46)                   6013          1    0.0    0.0     0.1    0.0
+               modifyMVar_                      UnliftIO.MVar                        src/UnliftIO/MVar.hs:106:1-69                                6014          1    0.0    0.0     0.1    0.0
+                modifyMVar_.\                   UnliftIO.MVar                        src/UnliftIO/MVar.hs:106:43-69                               6015          1    0.0    0.0     0.1    0.0
+                 stickyImpl.\                   RIO.Prelude.Logger                   src/RIO/Prelude/Logger.hs:(714,92)-(740,46)                  6016          1    0.0    0.0     0.1    0.0
+                  compare                       RIO.Prelude.Logger                   src/RIO/Prelude/Logger.hs:107:31-33                          6019          1    0.0    0.0     0.0    0.0
+                  logMinLevel                   RIO.Prelude.Logger                   src/RIO/Prelude/Logger.hs:465:5-15                           6017          1    0.0    0.0     0.0    0.0
+                  stickyImpl.\.clear            RIO.Prelude.Logger                   src/RIO/Prelude/Logger.hs:(717,7)-(720,32)                   6020          1    0.0    0.0     0.0    0.0
+                   logSend                      RIO.Prelude.Logger                   src/RIO/Prelude/Logger.hs:473:5-11                           6021          1    0.0    0.0     0.0    0.0
+                    logOptionsHandle            RIO.Prelude.Logger                   src/RIO/Prelude/Logger.hs:(353,1)-(384,5)                    6022          0    0.0    0.0     0.0    0.0
+                     logOptionsHandle.\         RIO.Prelude.Logger                   src/RIO/Prelude/Logger.hs:(371,9)-(383,30)                   6023          1    0.0    0.0     0.0    0.0
+                      stickyImpl.\.repeating    RIO.Prelude.Logger                   src/RIO/Prelude/Logger.hs:716:7-55                           6026          0    0.0    0.0     0.0    0.0
+                  stickyImpl.\.repeating        RIO.Prelude.Logger                   src/RIO/Prelude/Logger.hs:716:7-55                           6024          1    0.0    0.0     0.0    0.0
+                  logOptionsHandle              RIO.Prelude.Logger                   src/RIO/Prelude/Logger.hs:(353,1)-(384,5)                    6018          0    0.0    0.0     0.0    0.0
+                  simpleLogFunc                 RIO.Prelude.Logger                   src/RIO/Prelude/Logger.hs:(626,1)-(684,25)                   6029          0    0.0    0.0     0.1    0.0
+                   simpleLogFunc.ansi           RIO.Prelude.Logger                   src/RIO/Prelude/Logger.hs:(649,4)-(650,31)                   6049          2    0.0    0.0     0.0    0.0
+                    logUseColor                 RIO.Prelude.Logger                   src/RIO/Prelude/Logger.hs:469:5-15                           6050          2    0.0    0.0     0.0    0.0
+                   compare                      RIO.Prelude.Logger                   src/RIO/Prelude/Logger.hs:107:31-33                          6034          1    0.0    0.0     0.0    0.0
+                   getUtf8Builder               RIO.Prelude.Display                  src/RIO/Prelude/Display.hs:32:37-50                          6039          1    0.0    0.0     0.0    0.0
+                   logFormat                    RIO.Prelude.Logger                   src/RIO/Prelude/Logger.hs:472:5-13                           6071          1    0.0    0.0     0.0    0.0
+                   logMinLevel                  RIO.Prelude.Logger                   src/RIO/Prelude/Logger.hs:465:5-15                           6030          1    0.0    0.0     0.0    0.0
+                    logOptionsHandle            RIO.Prelude.Logger                   src/RIO/Prelude/Logger.hs:(353,1)-(384,5)                    6031          0    0.0    0.0     0.0    0.0
+                   logSend                      RIO.Prelude.Logger                   src/RIO/Prelude/Logger.hs:473:5-11                           6036          1    0.0    0.0     0.0    0.0
+                    logOptionsHandle            RIO.Prelude.Logger                   src/RIO/Prelude/Logger.hs:(353,1)-(384,5)                    6037          0    0.0    0.0     0.0    0.0
+                     logOptionsHandle.\         RIO.Prelude.Logger                   src/RIO/Prelude/Logger.hs:(371,9)-(383,30)                   6038          1    0.0    0.0     0.0    0.0
+                      <>                        RIO.Prelude.Display                  src/RIO/Prelude/Display.hs:33:13-21                          6042          0    0.0    0.0     0.0    0.0
+                       simpleLogFunc.getLevel   RIO.Prelude.Logger                   src/RIO/Prelude/Logger.hs:(663,4)-(674,25)                   6048          0    0.0    0.0     0.0    0.0
+                       simpleLogFunc.getSource  RIO.Prelude.Logger                   src/RIO/Prelude/Logger.hs:(677,4)-(679,37)                   6063          0    0.0    0.0     0.0    0.0
+                        fromString              RIO.Prelude.Display                  src/RIO/Prelude/Display.hs:47:3-42                           6070          0    0.0    0.0     0.0    0.0
+                         simpleLogFunc.ansi     RIO.Prelude.Logger                   src/RIO/Prelude/Logger.hs:(649,4)-(650,31)                   6086          0    0.0    0.0     0.0    0.0
+                         simpleLogFunc.getLoc   RIO.Prelude.Logger                   src/RIO/Prelude/Logger.hs:(682,4)-(684,25)                   6079          0    0.0    0.0     0.0    0.0
+                      simpleLogFunc.ansi        RIO.Prelude.Logger                   src/RIO/Prelude/Logger.hs:(649,4)-(650,31)                   6069          0    0.0    0.0     0.0    0.0
+                   logVerboseFormat             RIO.Prelude.Logger                   src/RIO/Prelude/Logger.hs:466:5-20                           6032          1    0.0    0.0     0.0    0.0
+                   simpleLogFunc.getLevel       RIO.Prelude.Logger                   src/RIO/Prelude/Logger.hs:(663,4)-(674,25)                   6044          1    0.1    0.0     0.1    0.0
+                    logSend                     RIO.Prelude.Logger                   src/RIO/Prelude/Logger.hs:473:5-11                           6055          0    0.0    0.0     0.0    0.0
+                     logOptionsHandle           RIO.Prelude.Logger                   src/RIO/Prelude/Logger.hs:(353,1)-(384,5)                    6056          0    0.0    0.0     0.0    0.0
+                      logOptionsHandle.\        RIO.Prelude.Logger                   src/RIO/Prelude/Logger.hs:(371,9)-(383,30)                   6057          0    0.0    0.0     0.0    0.0
+                       <>                       RIO.Prelude.Display                  src/RIO/Prelude/Display.hs:33:13-21                          6058          0    0.0    0.0     0.0    0.0
+                        simpleLogFunc.ansi      RIO.Prelude.Logger                   src/RIO/Prelude/Logger.hs:(649,4)-(650,31)                   6059          0    0.0    0.0     0.0    0.0
+                   simpleLogFunc.getLoc         RIO.Prelude.Logger                   src/RIO/Prelude/Logger.hs:(682,4)-(684,25)                   6073          1    0.0    0.0     0.0    0.0
+                    logUseLoc                   RIO.Prelude.Logger                   src/RIO/Prelude/Logger.hs:471:5-13                           6074          1    0.0    0.0     0.0    0.0
+                    logSend                     RIO.Prelude.Logger                   src/RIO/Prelude/Logger.hs:473:5-11                           6080          0    0.0    0.0     0.0    0.0
+                     logOptionsHandle           RIO.Prelude.Logger                   src/RIO/Prelude/Logger.hs:(353,1)-(384,5)                    6081          0    0.0    0.0     0.0    0.0
+                      logOptionsHandle.\        RIO.Prelude.Logger                   src/RIO/Prelude/Logger.hs:(371,9)-(383,30)                   6082          0    0.0    0.0     0.0    0.0
+                       <>                       RIO.Prelude.Display                  src/RIO/Prelude/Display.hs:33:13-21                          6083          0    0.0    0.0     0.0    0.0
+                        simpleLogFunc.ansi      RIO.Prelude.Logger                   src/RIO/Prelude/Logger.hs:(649,4)-(650,31)                   6084          0    0.0    0.0     0.0    0.0
+                   simpleLogFunc.getSource      RIO.Prelude.Logger                   src/RIO/Prelude/Logger.hs:(677,4)-(679,37)                   6060          1    0.0    0.0     0.0    0.0
+                   simpleLogFunc.getTimestamp   RIO.Prelude.Logger                   src/RIO/Prelude/Logger.hs:(653,4)-(660,73)                   6035          1    0.0    0.0     0.0    0.0
+               stickyImpl.\                     RIO.Prelude.Logger                   src/RIO/Prelude/Logger.hs:(714,92)-(740,46)                  6027          0    0.0    0.0     0.0    0.0
+                simpleLogFunc                   RIO.Prelude.Logger                   src/RIO/Prelude/Logger.hs:(626,1)-(684,25)                   6028          1    0.0    0.0     0.0    0.0
+           main                                 Day23                                src/Day23.hs:(33,1)-(37,63)                                  6093          0    0.0    0.0     0.0    0.0
+            logInfo                             RIO.Prelude.Logger                   src/RIO/Prelude/Logger.hs:185:1-33                           6100          0    0.0    0.0     0.0    0.0
+             logGeneric                         RIO.Prelude.Logger                   src/RIO/Prelude/Logger.hs:(165,1)-(167,42)                   6101          0    0.0    0.0     0.0    0.0
+              logFuncL                          Types                                src/Types.hs:20:3-59                                         6107          0    0.0    0.0     0.0    0.0
+               appLogFunc                       Types                                src/Types.hs:13:5-14                                         6112          2    0.0    0.0     0.0    0.0
+              newLogFunc                        RIO.Prelude.Logger                   src/RIO/Prelude/Logger.hs:(405,1)-(422,12)                   6113          0    0.0    0.0     0.0    0.0
+               stickyImpl                       RIO.Prelude.Logger                   src/RIO/Prelude/Logger.hs:(714,1)-(740,46)                   6114          2    0.0    0.0     0.0    0.0
+                modifyMVar_                     UnliftIO.MVar                        src/UnliftIO/MVar.hs:106:1-69                                6115          2    0.0    0.0     0.0    0.0
+                 modifyMVar_.\                  UnliftIO.MVar                        src/UnliftIO/MVar.hs:106:43-69                               6116          2    0.0    0.0     0.0    0.0
+                  stickyImpl.\                  RIO.Prelude.Logger                   src/RIO/Prelude/Logger.hs:(714,92)-(740,46)                  6117          2    0.0    0.0     0.0    0.0
+                   compare                      RIO.Prelude.Logger                   src/RIO/Prelude/Logger.hs:107:31-33                          6120          2    0.0    0.0     0.0    0.0
+                   logMinLevel                  RIO.Prelude.Logger                   src/RIO/Prelude/Logger.hs:465:5-15                           6118          2    0.0    0.0     0.0    0.0
+                   stickyImpl.\.clear           RIO.Prelude.Logger                   src/RIO/Prelude/Logger.hs:(717,7)-(720,32)                   6121          2    0.0    0.0     0.0    0.0
+                    logSend                     RIO.Prelude.Logger                   src/RIO/Prelude/Logger.hs:473:5-11                           6122          2    0.0    0.0     0.0    0.0
+                     logOptionsHandle           RIO.Prelude.Logger                   src/RIO/Prelude/Logger.hs:(353,1)-(384,5)                    6123          0    0.0    0.0     0.0    0.0
+                      logOptionsHandle.\        RIO.Prelude.Logger                   src/RIO/Prelude/Logger.hs:(371,9)-(383,30)                   6124          2    0.0    0.0     0.0    0.0
+                       stickyImpl.\.repeating   RIO.Prelude.Logger                   src/RIO/Prelude/Logger.hs:716:7-55                           6127          0    0.0    0.0     0.0    0.0
+                   stickyImpl.\.repeating       RIO.Prelude.Logger                   src/RIO/Prelude/Logger.hs:716:7-55                           6125          2    0.0    0.0     0.0    0.0
+                   logOptionsHandle             RIO.Prelude.Logger                   src/RIO/Prelude/Logger.hs:(353,1)-(384,5)                    6119          0    0.0    0.0     0.0    0.0
+                   simpleLogFunc                RIO.Prelude.Logger                   src/RIO/Prelude/Logger.hs:(626,1)-(684,25)                   6130          0    0.0    0.0     0.0    0.0
+                    simpleLogFunc.ansi          RIO.Prelude.Logger                   src/RIO/Prelude/Logger.hs:(649,4)-(650,31)                   6145          4    0.0    0.0     0.0    0.0
+                     logUseColor                RIO.Prelude.Logger                   src/RIO/Prelude/Logger.hs:469:5-15                           6146          4    0.0    0.0     0.0    0.0
+                    compare                     RIO.Prelude.Logger                   src/RIO/Prelude/Logger.hs:107:31-33                          6135          2    0.0    0.0     0.0    0.0
+                    getUtf8Builder              RIO.Prelude.Display                  src/RIO/Prelude/Display.hs:32:37-50                          6140          2    0.0    0.0     0.0    0.0
+                    logFormat                   RIO.Prelude.Logger                   src/RIO/Prelude/Logger.hs:472:5-13                           6162          2    0.0    0.0     0.0    0.0
+                    logMinLevel                 RIO.Prelude.Logger                   src/RIO/Prelude/Logger.hs:465:5-15                           6131          2    0.0    0.0     0.0    0.0
+                     logOptionsHandle           RIO.Prelude.Logger                   src/RIO/Prelude/Logger.hs:(353,1)-(384,5)                    6132          0    0.0    0.0     0.0    0.0
+                    logSend                     RIO.Prelude.Logger                   src/RIO/Prelude/Logger.hs:473:5-11                           6137          2    0.0    0.0     0.0    0.0
+                     logOptionsHandle           RIO.Prelude.Logger                   src/RIO/Prelude/Logger.hs:(353,1)-(384,5)                    6138          0    0.0    0.0     0.0    0.0
+                      logOptionsHandle.\        RIO.Prelude.Logger                   src/RIO/Prelude/Logger.hs:(371,9)-(383,30)                   6139          2    0.0    0.0     0.0    0.0
+                       <>                       RIO.Prelude.Display                  src/RIO/Prelude/Display.hs:33:13-21                          6142          0    0.0    0.0     0.0    0.0
+                        fromString              RIO.Prelude.Display                  src/RIO/Prelude/Display.hs:47:3-42                           6191          0    0.0    0.0     0.0    0.0
+                        simpleLogFunc.getLevel  RIO.Prelude.Logger                   src/RIO/Prelude/Logger.hs:(663,4)-(674,25)                   6144          0    0.0    0.0     0.0    0.0
+                        simpleLogFunc.getSource RIO.Prelude.Logger                   src/RIO/Prelude/Logger.hs:(677,4)-(679,37)                   6154          0    0.0    0.0     0.0    0.0
+                         fromString             RIO.Prelude.Display                  src/RIO/Prelude/Display.hs:47:3-42                           6161          0    0.0    0.0     0.0    0.0
+                          displayShow           RIO.Prelude.Display                  src/RIO/Prelude/Display.hs:137:1-31                          6167          0    0.0    0.0     0.0    0.0
+                          simpleLogFunc.ansi    RIO.Prelude.Logger                   src/RIO/Prelude/Logger.hs:(649,4)-(650,31)                   6190          0    0.0    0.0     0.0    0.0
+                          simpleLogFunc.getLoc  RIO.Prelude.Logger                   src/RIO/Prelude/Logger.hs:(682,4)-(684,25)                   6184          0    0.0    0.0     0.0    0.0
+                       simpleLogFunc.ansi       RIO.Prelude.Logger                   src/RIO/Prelude/Logger.hs:(649,4)-(650,31)                   6160          0    0.0    0.0     0.0    0.0
+                    logVerboseFormat            RIO.Prelude.Logger                   src/RIO/Prelude/Logger.hs:466:5-20                           6133          2    0.0    0.0     0.0    0.0
+                    simpleLogFunc.getLevel      RIO.Prelude.Logger                   src/RIO/Prelude/Logger.hs:(663,4)-(674,25)                   6143          2    0.0    0.0     0.0    0.0
+                     logSend                    RIO.Prelude.Logger                   src/RIO/Prelude/Logger.hs:473:5-11                           6148          0    0.0    0.0     0.0    0.0
+                      logOptionsHandle          RIO.Prelude.Logger                   src/RIO/Prelude/Logger.hs:(353,1)-(384,5)                    6149          0    0.0    0.0     0.0    0.0
+                       logOptionsHandle.\       RIO.Prelude.Logger                   src/RIO/Prelude/Logger.hs:(371,9)-(383,30)                   6150          0    0.0    0.0     0.0    0.0
+                        <>                      RIO.Prelude.Display                  src/RIO/Prelude/Display.hs:33:13-21                          6151          0    0.0    0.0     0.0    0.0
+                         simpleLogFunc.ansi     RIO.Prelude.Logger                   src/RIO/Prelude/Logger.hs:(649,4)-(650,31)                   6152          0    0.0    0.0     0.0    0.0
+                    simpleLogFunc.getLoc        RIO.Prelude.Logger                   src/RIO/Prelude/Logger.hs:(682,4)-(684,25)                   6181          2    0.0    0.0     0.0    0.0
+                     logUseLoc                  RIO.Prelude.Logger                   src/RIO/Prelude/Logger.hs:471:5-13                           6182          2    0.0    0.0     0.0    0.0
+                     logSend                    RIO.Prelude.Logger                   src/RIO/Prelude/Logger.hs:473:5-11                           6185          0    0.0    0.0     0.0    0.0
+                      logOptionsHandle          RIO.Prelude.Logger                   src/RIO/Prelude/Logger.hs:(353,1)-(384,5)                    6186          0    0.0    0.0     0.0    0.0
+                       logOptionsHandle.\       RIO.Prelude.Logger                   src/RIO/Prelude/Logger.hs:(371,9)-(383,30)                   6187          0    0.0    0.0     0.0    0.0
+                        <>                      RIO.Prelude.Display                  src/RIO/Prelude/Display.hs:33:13-21                          6188          0    0.0    0.0     0.0    0.0
+                         simpleLogFunc.ansi     RIO.Prelude.Logger                   src/RIO/Prelude/Logger.hs:(649,4)-(650,31)                   6189          0    0.0    0.0     0.0    0.0
+                    simpleLogFunc.getSource     RIO.Prelude.Logger                   src/RIO/Prelude/Logger.hs:(677,4)-(679,37)                   6153          2    0.0    0.0     0.0    0.0
+                    simpleLogFunc.getTimestamp  RIO.Prelude.Logger                   src/RIO/Prelude/Logger.hs:(653,4)-(660,73)                   6136          2    0.0    0.0     0.0    0.0
+                    <>                          RIO.Prelude.Display                  src/RIO/Prelude/Display.hs:33:13-21                          6141          0    0.0    0.0     0.0    0.0
+                stickyImpl.\                    RIO.Prelude.Logger                   src/RIO/Prelude/Logger.hs:(714,92)-(740,46)                  6128          0    0.0    0.0     0.0    0.0
+                 simpleLogFunc                  RIO.Prelude.Logger                   src/RIO/Prelude/Logger.hs:(626,1)-(684,25)                   6129          2    0.0    0.0     0.0    0.0
+        newLogFunc                              RIO.Prelude.Logger                   src/RIO/Prelude/Logger.hs:(405,1)-(422,12)                   6213          0    0.0    0.0     0.0    0.0
+         takeMVar                               UnliftIO.MVar                        src/UnliftIO/MVar.hs:46:1-30                                 6214          1    0.0    0.0     0.0    0.0
+     newLogFunc                                 RIO.Prelude.Logger                   src/RIO/Prelude/Logger.hs:(405,1)-(422,12)                   5981          0    0.0    0.0     0.0    0.0
+      newMVar                                   UnliftIO.MVar                        src/UnliftIO/MVar.hs:40:1-28                                 5984          0    0.0    0.0     0.0    0.0
+   withLogFunc.\                                RIO.Prelude.Logger                   src/RIO/Prelude/Logger.hs:(443,51)-(446,29)                  5972          0    0.0    0.0     0.0    0.0
+    newLogFunc                                  RIO.Prelude.Logger                   src/RIO/Prelude/Logger.hs:(405,1)-(422,12)                   5973          1    0.0    0.0     0.0    0.0
+     logTerminal                                RIO.Prelude.Logger                   src/RIO/Prelude/Logger.hs:467:5-15                           5974          1    0.0    0.0     0.0    0.0
+  simpleOptions                                 Options.Applicative.Simple           src/Options/Applicative/Simple.hs:(71,1)-(82,33)             5664          0    0.0    0.0     0.0    0.0
+   execParserPure                               Options.Applicative.Extra            src/Options/Applicative/Extra.hs:(130,1)-(139,33)            5665          1    0.0    0.0     0.0    0.0
+    runP                                        Options.Applicative.Internal         src/Options/Applicative/Internal.hs:91:1-59                  5666          1    0.0    0.0     0.0    0.0
+     execParserPure.p                           Options.Applicative.Extra            src/Options/Applicative/Extra.hs:139:5-33                    5667          1    0.0    0.0     0.0    0.0
+      runParserInfo                             Options.Applicative.Common           src/Options/Applicative/Common.hs:225:1-62                   5668          1    0.0    0.0     0.0    0.0
+       infoParser                               Options.Applicative.Types            src/Options/Applicative/Types.hs:90:5-14                     5677          1    0.0    0.0     0.0    0.0
+       runParserFully                           Options.Applicative.Common           src/Options/Applicative/Common.hs:(228,1)-(232,33)           5669          1    0.0    0.0     0.0    0.0
+        >>=                                     Options.Applicative.Internal         src/Options/Applicative/Internal.hs:64:3-50                  5670          1    0.0    0.0     0.0    0.0
+         >>=.\                                  Options.Applicative.Internal         src/Options/Applicative/Internal.hs:64:31-50                 5949          1    0.0    0.0     0.0    0.0
+          pure                                  Options.Applicative.Internal         src/Options/Applicative/Internal.hs:55:3-21                  5951          1    0.0    0.0     0.0    0.0
+         runParser                              Options.Applicative.Common           src/Options/Applicative/Common.hs:(201,1)-(219,24)           5673          0    0.0    0.0     0.0    0.0
+          exitP                                 Options.Applicative.Internal         src/Options/Applicative/Internal.hs:81:3-75                  5674          0    0.0    0.0     0.0    0.0
+        runParser                               Options.Applicative.Common           src/Options/Applicative/Common.hs:(201,1)-(219,24)           5671          1    0.0    0.0     0.0    0.0
+         exitP                                  Options.Applicative.Internal         src/Options/Applicative/Internal.hs:81:3-75                  5672          1    0.0    0.0     0.0    0.0
+         runParser.result                       Options.Applicative.Common           src/Options/Applicative/Common.hs:212:5-47                   5675          1    0.0    0.0     0.0    0.0
+          evalParser                            Options.Applicative.Common           src/Options/Applicative/Common.hs:(237,1)-(241,56)           5676         35    0.0    0.0     0.0    0.0
+           bashCompletionParser                 Options.Applicative.BashCompletion   src/Options/Applicative/BashCompletion.hs:(35,1)-(65,7)      5770          0    0.0    0.0     0.0    0.0
+            bashCompletionParser.complParser    Options.Applicative.BashCompletion   src/Options/Applicative/BashCompletion.hs:(40,5)-(65,7)      5771          0    0.0    0.0     0.0    0.0
+             many                               Options.Applicative.Types            src/Options/Applicative/Types.hs:300:3-26                    5772          0    0.0    0.0     0.0    0.0
+              fromM                             Options.Applicative.Types            src/Options/Applicative/Types.hs:282:1-26                    5773          0    0.0    0.0     0.0    0.0
+               manyM                            Options.Applicative.Types            src/Options/Applicative/Types.hs:(288,1)-(292,30)            5774          0    0.0    0.0     0.0    0.0
+                >>=                             Options.Applicative.Types            src/Options/Applicative/Types.hs:272:3-64                    5775          0    0.0    0.0     0.0    0.0
+                 >>=.\                          Options.Applicative.Types            src/Options/Applicative/Types.hs:272:37-64                   5776          0    0.0    0.0     0.0    0.0
+                  >>=.\.\                       Options.Applicative.Types            src/Options/Applicative/Types.hs:272:46-63                   5777          1    0.0    0.0     0.0    0.0
+                   runParserM                   Options.Applicative.Types            src/Options/Applicative/Types.hs:268:5-14                    5778          1    0.0    0.0     0.0    0.0
+           execParserPure.pinfo'                Options.Applicative.Extra            src/Options/Applicative/Extra.hs:(136,5)-(138,51)            5952          0    0.0    0.0     0.0    0.0
+            fmap                                Options.Applicative.Types            src/Options/Applicative/Types.hs:(257,3)-(261,43)            5953          0    0.0    0.0     0.0    0.0
+           simpleOptions.parser                 Options.Applicative.Simple           src/Options/Applicative/Simple.hs:76:9-86                    5955          0    0.0    0.0     0.0    0.0
+            simpleParser                        Options.Applicative.Simple           src/Options/Applicative/Simple.hs:(170,1)-(184,32)           5956          0    0.0    0.0     0.0    0.0
+             simpleParser.config                Options.Applicative.Simple           src/Options/Applicative/Simple.hs:(180,9)-(184,32)           5957          0    0.0    0.0     0.0    0.0
+              fmap                              Options.Applicative.Types            src/Options/Applicative/Types.hs:(257,3)-(261,43)            5958          0    0.0    0.0     0.0    0.0
+     execParserPure.pinfo'                      Options.Applicative.Extra            src/Options/Applicative/Extra.hs:(136,5)-(138,51)            5678          1    0.0    0.0     0.0    0.0
+      fmap                                      Options.Applicative.Types            src/Options/Applicative/Types.hs:(257,3)-(261,43)            5702         19    0.0    0.0     0.0    0.0
+      bashCompletionParser                      Options.Applicative.BashCompletion   src/Options/Applicative/BashCompletion.hs:(35,1)-(65,7)      5700          1    0.0    0.0     0.0    0.0
+       bashCompletionParser.complParser         Options.Applicative.BashCompletion   src/Options/Applicative/BashCompletion.hs:(40,5)-(65,7)      5701          1    0.0    0.0     0.0    0.0
+        fmap                                    Options.Applicative.Types            src/Options/Applicative/Types.hs:(257,3)-(261,43)            5704         12    0.0    0.0     0.0    0.0
+      infoParser                                Options.Applicative.Types            src/Options/Applicative/Types.hs:90:5-14                     5869          1    0.0    0.0     0.0    0.0
+   handleParseResult                            Options.Applicative.Extra            src/Options/Applicative/Extra.hs:(82,1)-(94,17)              5954          1    0.0    0.0     0.0    0.0
+   simpleOptions.parser                         Options.Applicative.Simple           src/Options/Applicative/Simple.hs:76:9-86                    5679          1    0.0    0.0     0.0    0.0
+    info                                        Options.Applicative.Builder          src/Options/Applicative/Builder.hs:(443,1)-(452,34)          5680          1    0.0    0.0     0.0    0.0
+     applyInfoMod                               Options.Applicative.Builder          src/Options/Applicative/Builder.hs:376:5-16                  5681          1    0.0    0.0     0.0    0.0
+     info.base                                  Options.Applicative.Builder          src/Options/Applicative/Builder.hs:(445,5)-(452,34)          5693          1    0.0    0.0     0.0    0.0
+     simpleOptions.desc                         Options.Applicative.Simple           src/Options/Applicative/Simple.hs:77:9-50                    5682          1    0.0    0.0     0.0    0.0
+      <>                                        Options.Applicative.Builder          src/Options/Applicative/Builder.hs:383:3-56                  5683          2    0.0    0.0     0.0    0.0
+       applyInfoMod                             Options.Applicative.Builder          src/Options/Applicative/Builder.hs:376:5-16                  5694          3    0.0    0.0     0.0    0.0
+       header                                   Options.Applicative.Builder          src/Options/Applicative/Builder.hs:395:1-57                  5695          1    0.0    0.0     0.0    0.0
+        header.\                                Options.Applicative.Builder          src/Options/Applicative/Builder.hs:395:28-57                 5696          1    0.0    0.0     0.0    0.0
+       progDesc                                 Options.Applicative.Builder          src/Options/Applicative/Builder.hs:413:1-61                  5697          1    0.0    0.0     0.0    0.0
+        progDesc.\                              Options.Applicative.Builder          src/Options/Applicative/Builder.hs:413:30-61                 5698          1    0.0    0.0     0.0    0.0
+    simpleParser                                Options.Applicative.Simple           src/Options/Applicative/Simple.hs:(170,1)-(184,32)           5902          1    0.0    0.0     0.0    0.0
+     simpleParser.config                        Options.Applicative.Simple           src/Options/Applicative/Simple.hs:(180,9)-(184,32)           5928          1    0.0    0.0     0.0    0.0
+      fmap                                      Options.Applicative.Types            src/Options/Applicative/Types.hs:(257,3)-(261,43)            5929          3    0.0    0.0     0.0    0.0
+   simpleOptions.versionOption                  Options.Applicative.Simple           src/Options/Applicative/Simple.hs:(78,9)-(82,33)             5870          1    0.0    0.0     0.0    0.0
+    infoOption                                  Options.Applicative.Builder          src/Options/Applicative/Builder.hs:348:1-34                  5872          0    0.0    0.0     0.0    0.0
+     abortOption                                Options.Applicative.Builder          src/Options/Applicative/Builder.hs:(341,1)-(344,16)          5873          1    0.0    0.0     0.0    0.0
+      <>                                        Options.Applicative.Builder.Internal src/Options/Applicative/Builder/Internal.hs:(140,3)-(141,40) 5887          4    0.0    0.0     0.0    0.0
+       <>                                       Options.Applicative.Builder.Internal src/Options/Applicative/Builder/Internal.hs:(96,3)-(97,47)   5897          4    0.0    0.0     0.0    0.0
+      noArgError                                Options.Applicative.Builder          src/Options/Applicative/Builder.hs:194:1-61                  5877          1    0.0    0.0     0.0    0.0
+       fieldMod                                 Options.Applicative.Builder.Internal src/Options/Applicative/Builder/Internal.hs:132:1-28         5878          1    0.0    0.0     0.0    0.0
+      option                                    Options.Applicative.Builder          src/Options/Applicative/Builder.hs:(367,1)-(372,65)          5874          1    0.0    0.0     0.0    0.0
+       mkParser                                 Options.Applicative.Builder.Internal src/Options/Applicative/Builder/Internal.hs:(163,1)-(167,36) 5899          1    0.0    0.0     0.0    0.0
+        mkParser.\                              Options.Applicative.Builder.Internal src/Options/Applicative/Builder/Internal.hs:167:20-31        5900          1    0.0    0.0     0.0    0.0
+        mkParser.o                              Options.Applicative.Builder.Internal src/Options/Applicative/Builder/Internal.hs:165:5-34         5901          1    0.0    0.0     0.0    0.0
+       option.(...)                             Options.Applicative.Builder          src/Options/Applicative/Builder.hs:369:5-41                  5876          1    0.0    0.0     0.0    0.0
+        <>                                      Options.Applicative.Builder.Internal src/Options/Applicative/Builder/Internal.hs:(140,3)-(141,40) 5895          1    0.0    0.0     0.0    0.0
+         <>                                     Options.Applicative.Builder.Internal src/Options/Applicative/Builder/Internal.hs:(96,3)-(97,47)   5896          1    0.0    0.0     0.0    0.0
+       option.d                                 Options.Applicative.Builder          src/Options/Applicative/Builder.hs:369:5-41                  5875          1    0.0    0.0     0.0    0.0
+   simpleOptions.desc                           Options.Applicative.Simple           src/Options/Applicative/Simple.hs:77:9-50                    5689          0    0.0    0.0     0.0    0.0
+    <>                                          Options.Applicative.Builder          src/Options/Applicative/Builder.hs:383:3-56                  5690          0    0.0    0.0     0.0    0.0
+     fullDesc                                   Options.Applicative.Builder          src/Options/Applicative/Builder.hs:387:1-52                  5691          0    0.0    0.0     0.0    0.0
+      fullDesc.\                                Options.Applicative.Builder          src/Options/Applicative/Builder.hs:387:28-52                 5692          1    0.0    0.0     0.0    0.0

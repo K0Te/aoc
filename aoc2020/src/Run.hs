@@ -3,7 +3,7 @@
 module Run (run) where
 
 import Import
-import Day22 ( main )
+import Day23 ( main )
 
 run :: RIO App ()
 run = do

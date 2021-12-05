@@ -11,12 +11,22 @@ import           Import        hiding (Down, to, (%~))
 import           Prelude       (print)
 import qualified RIO.Text      as T
 
--- Issues:
--- - BitCount is hardcoded - 11
--- - Manual recursion for `findNum`
--- - Stat is reused for {0,1} and for real statistics - concise but confusing
-
 main :: IO ()
 main = do
     lines_ <- readLinesT "data/4.txt"
     print lines_
+
+
+data Board = Board
+
+hasWin :: Board -> Bool
+hasWin = undefined 
+
+calcScore :: Board -> Int
+calcScore = undefined
+
+callNumber :: Int -> Board -> Board
+callNumber = undefined
+
+data Puzzle = Puzzle [Board] [Int]
+

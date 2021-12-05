@@ -39,9 +39,9 @@ parseList :: [Text] -> [Move]
 parseList t = t ^.. folded . Control.Lens.to parseMove . _Right
 
 performMove :: (Int, Int) -> Move -> (Int, Int)
-performMove pos (Forward v) = pos & _1 %~ (+v)
-performMove pos (Up v)      = pos & _2 %~ (+ (-v))
-performMove pos (Down v)    = pos & _2 %~ (+v)
+performMove pos (Forward v) = pos & _1 +~ v
+performMove pos (Up v)      = pos & _2 -~ v
+performMove pos (Down v)    = pos & _2 +~ v
 
 finalPosition :: [Move] -> (Int, Int)
 finalPosition = foldl' performMove (0, 0)
@@ -49,10 +49,10 @@ finalPosition = foldl' performMove (0, 0)
 
 performMove2 :: (Int, Int, Int) -> Move -> (Int, Int, Int)
 performMove2 pos (Forward v) = pos &
-    _1 %~ (+ v )
-    & _3 %~ (+ v * (pos ^. _2) )
-performMove2 pos (Up v)      = pos & _2 %~ (+ (-v))
-performMove2 pos (Down v)    = pos & _2 %~ (+v)
+    _1 +~ v
+    & _3 +~ v * (pos ^. _2)
+performMove2 pos (Up v)      = pos & _2 -~ v
+performMove2 pos (Down v)    = pos & _2 +~ v
 
 finalPosition2 :: [Move] -> (Int, Int, Int)
 finalPosition2 = foldl' performMove2 (0, 0, 0)

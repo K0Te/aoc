@@ -1,11 +1,11 @@
 {-# LANGUAGE NoImplicitPrelude #-}
 module Day1 where
 
-import Import
-import File (readLinesS)
-import Prelude (print, zipWith3, tail)
-import Control.Lens hiding ((^.), (^..))
-import Data.List (zip3)
+import           Control.Lens hiding ((^.), (^..))
+import           Data.List    (zip3)
+import           File         (readLinesS)
+import           Import
+import           Prelude      (print, tail, zipWith3)
 
 main :: IO ()
 main = do

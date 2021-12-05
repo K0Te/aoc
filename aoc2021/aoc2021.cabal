@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 775f8ea03ca1f2889ceb58a2061afc5eab543f2070e3b6cdbc18ae825da72ae2
+-- hash: 671df467f91b257562422df7af793b803934d41b0ad2f1ebf9d7f6e9f2a51290
 
 name:           aoc2021
 version:        0.1.0.0
@@ -29,6 +29,7 @@ library
   exposed-modules:
       Day1
       Day2
+      Day3
       File
       Import
       Run
@@ -42,6 +43,7 @@ library
   build-depends:
       attoparsec
     , base >=4.11 && <10
+    , containers
     , lens
     , rio >=0.1.12.0
   default-language: Haskell2010
@@ -57,6 +59,7 @@ executable aoc2021-exe
       aoc2021
     , attoparsec
     , base >=4.11 && <10
+    , containers
     , lens
     , optparse-simple
     , rio >=0.1.12.0
@@ -75,6 +78,7 @@ test-suite aoc2021-test
       aoc2021
     , attoparsec
     , base >=4.11 && <10
+    , containers
     , hspec
     , lens
     , rio >=0.1.12.0

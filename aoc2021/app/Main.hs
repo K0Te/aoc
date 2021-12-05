@@ -7,7 +7,7 @@ import Run
 import RIO.Process
 import Options.Applicative.Simple
 import qualified Paths_aoc2021
-import qualified Day2 as D
+import qualified Day3 as D
 
 main :: IO ()
 main = D.main

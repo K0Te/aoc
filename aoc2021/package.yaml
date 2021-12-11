@@ -25,6 +25,7 @@ dependencies:
 - lens
 - attoparsec
 - containers
+- vector
 
 ghc-options:
 - -Wall

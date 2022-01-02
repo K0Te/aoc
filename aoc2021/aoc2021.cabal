@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 2079bed0a5edaf11331ed3b4d30e3fe743197857a1dc7b523dd53a65886db3ec
+-- hash: 710664783d84690cd1b50f13fbd6954917bae421f6c307d5971f8cd9daf9cc07
 
 name:           aoc2021
 version:        0.1.0.0
@@ -35,6 +35,7 @@ library
       Day6
       Day7
       Day8
+      Day9
       File
       Import
       Run
@@ -50,6 +51,7 @@ library
     , base >=4.11 && <10
     , containers
     , lens
+    , mtl
     , rio >=0.1.12.0
     , vector
   default-language: Haskell2010
@@ -67,6 +69,7 @@ executable aoc2021-exe
     , base >=4.11 && <10
     , containers
     , lens
+    , mtl
     , optparse-simple
     , rio >=0.1.12.0
     , vector
@@ -88,6 +91,7 @@ test-suite aoc2021-test
     , containers
     , hspec
     , lens
+    , mtl
     , rio >=0.1.12.0
     , vector
   default-language: Haskell2010

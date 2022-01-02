@@ -26,6 +26,7 @@ dependencies:
 - attoparsec
 - containers
 - vector
+- mtl
 
 ghc-options:
 - -Wall

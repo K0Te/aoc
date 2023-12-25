@@ -71,7 +71,7 @@ public class Test
         result.Should().Be(467835);
     }
     
-    [Fact]
+    [Fact(Skip = "For getting an answer")]
     public void Result2()
     {
         var result = Calc.Calculate2(File.ReadLines("/Users/olegnykolyn/github/aoc/aoc2023/Day3/Data.txt"));
